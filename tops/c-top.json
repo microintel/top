@@ -1,8 +1,8 @@
 {
   "syntax": ["#include <stdio.h>\n\nint main() {\n\tprintf(\"Hello World!\");\n\treturn 0;\n}", "https://www.w3schools.com/c/tryc.php?filename=demo_helloworld"],
-  "single statements": ["example code", "output url"],
-  "multiple statements": ["example code", "output url"],
-  "output": ["example code", "output url"],
+  "single statements": ["printf(\"Hello World!\");", "https://www.w3schools.com/c/tryc.php?filename=demo_statements"],
+  "multiple statements": ["printf(\"Hello World!\");\nprintf(\"Have a good day!\");\nreturn 0;", "https://www.w3schools.com/c/tryc.php?filename=demo_statements2"],
+  "output": ["printf(\"Hello World!\");", "https://www.w3schools.com/c/tryc.php?filename=demo_output"],
   "double quotes": ["example code", "output url"],
   "printf function": ["example code", "output url"],
   "new lines": ["example code", "output url"],
