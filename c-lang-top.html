@@ -306,7 +306,6 @@
     ls.innerHTML = ""
     let keys = Object.keys(tp)
       .filter(x => x.toLowerCase().includes(filter.toLowerCase()))
-      .sort()
 
     if (!keys.length) {
       ls.innerHTML = "<div class='mt' style='padding:10px'>No tpc</div>"
