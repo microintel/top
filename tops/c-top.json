@@ -1,5 +1,5 @@
 {
-  "syntax": ["example code", "output url"],
+  "syntax": ["#include <stdio.h>\n\nint main() {\n\tprintf(\"Hello World!\");\n\treturn 0;\n}", "https://www.w3schools.com/c/tryc.php?filename=demo_helloworld"],
   "single statements": ["example code", "output url"],
   "multiple statements": ["example code", "output url"],
   "output": ["example code", "output url"],
