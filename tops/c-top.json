@@ -1,37 +1,19 @@
 {
-  "syntax": ["#include <stdio.h>\n\nint main() {\n\tprintf(\"Hello World!\");\n\treturn 0;\n}", "https://www.w3schools.com/c/tryc.php?filename=demo_helloworld"],
-  "single statements": ["printf(\"Hello World!\");", "https://www.w3schools.com/c/tryc.php?filename=demo_statements"],
-  "multiple statements": ["printf(\"Hello World!\");\nprintf(\"Have a good day!\");\nreturn 0;", "https://www.w3schools.com/c/tryc.php?filename=demo_statements2"],
-  "output": ["printf(\"Hello World!\");", "https://www.w3schools.com/c/tryc.php?filename=demo_output"],
-  "double quotes": ["printf(\"This sentence will work!\");", "https://www.w3schools.com/c/tryc.php?filename=demo_output2"],
-  "printf function": ["printf(\"hi g!\");", "https://www.w3schools.com/c/tryc.php?filename=demo_output2"],
-  "new lines": ["printf(\"Hello World!\\nI am learning C.\\nAnd it is awesome!\");", "https://www.w3schools.com/c/tryc.php?filename=demo_newline2"],
-  "escape sequence": ["char txt[] = \"We are the so-called \\\"Vikings\\\" from the north.\";\n  printf(\"%s\", txt);", "https://www.w3schools.com/c/tryc.php?filename=demo_strings_esc1"],
-  "comments single and multiple": ["/* djjdje\nKskskss\nNsnsks*/\n\n// Single comment", "https://www.w3schools.com/c/tryc.php?filename=demo_comments_multi"],
-  "variable": [
-  "int x = 8;\nprintf(\"%d\", x);",
-  "https://www.w3schools.com/c/tryc.php?filename=demo_output2"
-  ],
-  "declaring variable": [
-  "char txt[] = \"We are the so-called \\\"Vikings\\\" from the north.\";\nprintf(\"%s\", txt);",
-  "https://www.w3schools.com/c/tryc.php?filename=demo_strings_esc1"
-  ],
-  "output variable": [
-  "printf(\"Hello World!\\nI am learning C.\\nAnd it is awesome!\");",
-  "https://www.w3schools.com/c/tryc.php?filename=demo_newline2"
-  ],
-  "format specifiers": [
-  "int x = 5;\nfloat y = 3.2;\nprintf(\"x = %d, y = %f\", x, y);",
-  "https://www.w3schools.com/c/tryc.php?filename=demo_output2"
-  ],
-  "Change Variable Values": [
-  "x = 10;\nprintf(\"x now = %d\", x);",
-  "https://www.w3schools.com/c/tryc.php?filename=demo_output2"
-  ],
-  "comments": [
-  "/* djjdje\nKskskss\nNsnsks*/\n// Single comment",
-  "https://www.w3schools.com/c/tryc.php?filename=demo_comments_multi"
-  ],"Add Variables Together": ["example code", "output url"],
+  "syntax": ["example code", "output url"],
+  "single statements": ["example code", "output url"],
+  "multiple statements": ["example code", "output url"],
+  "output": ["example code", "output url"],
+  "double quotes": ["example code", "output url"],
+  "printf function": ["example code", "output url"],
+  "new lines": ["example code", "output url"],
+  "escape sequence": ["example code", "output url"],
+  "comments single and multiple": ["example code", "output url"],
+  "variable": ["example code", "output url"],
+  "declaring variable": ["example code", "output url"],
+  "output variable": ["example code", "output url"],
+  "format specifiers": ["example code", "output url"],
+  "Change Variable Values": ["example code", "output url"],
+  "Add Variables Together": ["example code", "output url"],
   "Declare Multiple Variables": ["example code", "output url"],
   "C Variable Names": ["example code", "output url"],
   "Data Types": ["example code", "output url"],
