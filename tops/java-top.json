@@ -1,8 +1,4 @@
 {
-  "syntax": [
-    "",
-    ""
-  ],
   "Java Syntax": [
     "Main.java\n\npublic class Main {\n  public static void main(String[] args) {\n    System.out.println(\"Hello World\");\n  }\n}",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_helloworld"
