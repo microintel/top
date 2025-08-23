@@ -334,13 +334,13 @@
     function goCgpt(t) {
       t = document.getElementById(t).textContent || "";
       let e = encodeURIComponent("Explain this java snippet :\n\n" + t);
-      window.open("https://chat.openai.com", "_blank");
+      window.open("https://chat.openai.com/?prompt=" + e, "_blank");
     }
 
     function goGOO(t) {
       t = document.getElementById(t).innerText || "";
       let e = encodeURIComponent("Explain this java snippet :\n\n" + t);
-      window.open(`https://www.google.com/search?q=${e}&udm=14`, "_blank");
+     window.open(`https://www.google.com/search?q=${e}&udm=50`, "_blank");
     }
 
     let db
@@ -388,7 +388,7 @@
       if (!topicKeys.length) { ls.innerHTML = "<div class='mt' style='padding:10px'>No topic</div>"; return }
       topicKeys.forEach((k, i) => {
         let b = document.createElement("button")
-        b.innerHTML = `<span>${i + 1}</span><span style="text-align:left">${k}</span><span style="color:red;cursor:pointer;" title="Delete">×</span>`
+        b.innerHTML = `<span>${i + 1}</span><span style="text-align:left">${k}</span><span style="color:red;cursor:pointer;" title="Delete"></span>`
         b.onclick = e => {
           if (e.target.tagName === "SPAN" && e.target.innerText === "×") {
             if (confirm(`Delete topic "${k}"?`)) deleteTopicFromDB(k);
