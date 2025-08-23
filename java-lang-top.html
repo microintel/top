@@ -19,7 +19,7 @@
     }
 
     * {
-      box-sizing: border-box;
+      box-sizing: border-box
     }
 
     body {
@@ -27,26 +27,26 @@
       background: var(--bg);
       color: var(--tx);
       font-family: system-ui, Arial;
-      line-height: 1.5;
+      line-height: 1.5
     }
 
     .wp {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      overflow-y: scroll;
+      overflow-y: scroll
     }
 
-    as {
+    aside {
       padding: 1rem;
       background: var(--pl);
-      position: relative;
+      position: relative
     }
 
     .sr {
       display: flex;
       gap: .5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1rem
     }
 
     .sr input {
@@ -55,12 +55,12 @@
       border: 1px solid var(--rg);
       border-radius: 10px;
       background: var(--cd);
-      color: var(--tx);
+      color: var(--tx)
     }
 
     .ls {
       overflow-y: auto;
-      padding-right: .25rem;
+      padding-right: .25rem
     }
 
     .ls button {
@@ -76,17 +76,17 @@
       transition: .2s;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: center
     }
 
     .ls button:hover {
       background: var(--cd);
-      border-color: grey;
+      border-color: grey
     }
 
     .ls button.act {
       outline: 2px solid grey;
-      background: var(--cd);
+      background: var(--cd)
     }
 
     .md {
@@ -99,11 +99,11 @@
       display: none;
       justify-content: center;
       align-items: center;
-      z-index: 1000;
+      z-index: 1000
     }
 
     .md.act {
-      display: flex;
+      display: flex
     }
 
     .mc {
@@ -113,7 +113,7 @@
       max-height: 90%;
       display: flex;
       flex-direction: column;
-      overflow: hidden;
+      overflow: hidden
     }
 
     .mh {
@@ -121,7 +121,7 @@
       justify-content: space-between;
       align-items: center;
       padding: .75rem 1rem;
-      border-bottom: 1px solid var(--rg);
+      border-bottom: 1px solid var(--rg)
     }
 
     .mh .x {
@@ -129,12 +129,12 @@
       cursor: pointer;
       background: none;
       border: none;
-      color: var(--mt);
+      color: var(--mt)
     }
 
     .mb {
       flex-grow: 1;
-      overflow-y: auto;
+      overflow-y: auto
     }
 
     .pln {
@@ -142,30 +142,30 @@
       border-radius: 14px;
       overflow: hidden;
       background: var(--cd);
-      margin: 1rem;
+      margin: 1rem
     }
 
     .pln hd {
       display: block;
       padding: .75rem 1rem;
       border-bottom: 1px solid var(--rg);
-      font-weight: 600;
+      font-weight: 600
     }
 
     .cw {
-      background: var(--cd);
+      background: var(--cd)
     }
 
     pre {
       margin: 0;
       padding: 1rem;
-      overflow: auto;
+      overflow: auto
     }
 
     code {
       font-family: monospace;
       font-size: .8125rem;
-      color: lawngreen;
+      color: lawngreen
     }
 
     .acs {
@@ -173,7 +173,7 @@
       gap: .625rem;
       padding: .75rem;
       background: var(--cd);
-      border-top: 1px solid var(--rg);
+      border-top: 1px solid var(--rg)
     }
 
     .bt {
@@ -183,60 +183,59 @@
       cursor: pointer;
       font-weight: 600;
       color: #fff;
-      background: var(--b1);
+      background: var(--b1)
     }
 
     .bt.s2 {
-      background: var(--b2);
+      background: var(--b2)
     }
 
     .bt[disabled] {
       opacity: .5;
-      cursor: not-allowed;
+      cursor: not-allowed
     }
 
     h1,
     h2 {
       font-size: 1.25rem;
-      margin: 0;
+      margin: 0
     }
 
     .mt {
       color: var(--mt);
-      font-size: .75rem;
+      font-size: .75rem
     }
 
     .tc {
-      padding: 1rem;
+      padding: 1rem
     }
 
     @media(min-width:768px) {
       .wp {
         display: grid;
-        grid-template-columns: 320px 1fr;
+        grid-template-columns: 320px 1fr
       }
 
-      as {
+      aside {
         border-right: 1px solid var(--rg);
         display: flex;
-        flex-direction: column;
+        flex-direction: column
       }
 
       .md {
-        display: none !important;
+        display: none !important
       }
 
       .tc {
-        padding: 0;
+        padding: 0
       }
     }
   </style>
-   
 </head>
 
 <body>
   <div class="wp">
-    <as>
+    <aside>
       <div style="margin-bottom:1rem">
         <h2>Java Topics </h2>
         <div class="mt">Data is gatherd from W3Schools</div>
@@ -245,7 +244,7 @@
         <input id="q" placeholder="Search..." autocomplete="off">
       </div>
       <div class="ls" id="ls"></div>
-    </as>
+    </aside>
 
     <main class="mn">
       <div>
@@ -258,10 +257,12 @@
           <pre><code id="cd"></code></pre>
         </div>
         <div class="acs">
+          <button class="bt" id="prevBtn">⬅ Prev</button>
+          <button class="bt" id="nextBtn">Next ➡</button>
           <button class="bt" id="ob" disabled>Open</button>
           <button class="bt s2" id="cp">Copy</button>
-           <button class="bt" onclick="goCgpt('cd')"> Ask ChatGPT</button>
-              <button class="bt" onclick="goGOO('cd')"> Google AI Mode</button>
+          <button class="bt" onclick="goCgpt('cd')"> Ask ChatGPT</button>
+          <button class="bt" onclick="goGOO('cd')"> Google AI Mode</button>
         </div>
       </section>
 
@@ -285,11 +286,17 @@
         </div>
         <div class="mb">
           <section class="pln" style="display:block;margin:0">
-            <hd>Code</hd>
+            <div style="display: flex;justify-content: space-around;align-items: center;">
+           
+            <button class="bt" id="mprevBtn">⬅</button>
+             <hd>Code</hd>
+              <button class="bt" id="mnextBtn">➡</button>
+              </div>
             <div class="cw">
               <pre><code id="mcd"></code></pre>
             </div>
             <div class="acs">
+              
               <button class="bt" id="mob" disabled>Open</button>
               <button class="bt s2" id="mcp">Copy</button>
               <button class="bt" style="font-size: 0.9rem;" onclick="goCgpt('mcd')"> ChatGPT</button>
@@ -317,7 +324,6 @@
     const mcd = document.getElementById("mcd")
     const mob = document.getElementById("mob")
     const mcp = document.getElementById("mcp")
-
     const tn = document.getElementById("tn")
     const tc = document.getElementById("tc")
     const tu = document.getElementById("tu")
@@ -325,150 +331,160 @@
     const exportBtn = document.getElementById("exportJSON")
     const importInput = document.getElementById("importJSON")
 
-
     function goCgpt(t) {
       t = document.getElementById(t).textContent || "";
       let e = encodeURIComponent("Explain this java snippet :\n\n" + t);
-      window.open("https://chat.openai.com/?prompt=" + e, "_blank");
+      window.open("https://chat.openai.com", "_blank");
     }
 
     function goGOO(t) {
-  t = document.getElementById(t).innerText || "";
-  let e = encodeURIComponent("Explain this java snippet :\n\n" + t);
-  window.open(`https://www.google.com/search?q=${e}&udm=50`, "_blank");
-}
+      t = document.getElementById(t).innerText || "";
+      let e = encodeURIComponent("Explain this java snippet :\n\n" + t);
+      window.open(`https://www.google.com/search?q=${e}&udm=14`, "_blank");
+    }
 
-
-
-    // IndexedDB
     let db
     const request = indexedDB.open("CtopicsDB", 1)
-      request.onupgradeneeded = e => {
-        db = e.target.result
-        if (!db.objectStoreNames.contains("topics")) db.createObjectStore("topics", { keyPath: "name" })
+    request.onupgradeneeded = e => {
+      db = e.target.result
+      if (!db.objectStoreNames.contains("topics")) db.createObjectStore("topics", { keyPath: "name" })
+    }
+    request.onsuccess = e => { db = e.target.result; loadTopicsFromDB() }
+    request.onerror = e => console.error("DB error", e)
+
+    function saveTopicToDB(topic) {
+      const tx = db.transaction("topics", "readwrite")
+      const store = tx.objectStore("topics")
+      store.put(topic)
+      tx.oncomplete = () => { tp[topic.name] = [topic.code, topic.url]; renderList() }
+    }
+
+    function deleteTopicFromDB(name) {
+      const tx = db.transaction("topics", "readwrite")
+      const store = tx.objectStore("topics")
+      store.delete(name)
+      tx.oncomplete = () => { delete tp[name]; renderList() }
+    }
+
+    function loadTopicsFromDB() {
+      const tx = db.transaction("topics", "readonly")
+      const store = tx.objectStore("topics")
+      store.getAll().onsuccess = e => {
+        const topics = e.target.result
+        topics.forEach(t => tp[t.name] = [t.code, t.url])
+        renderList()
       }
-      request.onsuccess = e => { db = e.target.result; loadTopicsFromDB() }
-      request.onerror = e => console.error("DB error", e)
+    }
 
-      function saveTopicToDB(topic) {
-        const tx = db.transaction("topics", "readwrite")
-        const store = tx.objectStore("topics")
-        store.put(topic)
-        tx.oncomplete = () => { tp[topic.name] = [topic.code, topic.url]; renderList() }
-      }
+    fetch("https://microintel.github.io/top/tops/java-top.json")
+      .then(r => r.json())
+      .then(data => { tp = data; renderList() })
 
-      function deleteTopicFromDB(name) {
-        const tx = db.transaction("topics", "readwrite")
-        const store = tx.objectStore("topics")
-        store.delete(name)
-        tx.oncomplete = () => { delete tp[name]; renderList() }
-      }
+    let topicKeys = [], curIndex = -1
 
-      function loadTopicsFromDB() {
-        const tx = db.transaction("topics", "readonly")
-        const store = tx.objectStore("topics")
-        store.getAll().onsuccess = e => {
-          const topics = e.target.result
-          topics.forEach(t => tp[t.name] = [t.code, t.url])
-          renderList()
-        }
-      }
-
-      // Initial fetch
-      fetch("https://microintel.github.io/top/tops/java-top.json")
-        .then(r => r.json())
-        .then(data => { tp = data; renderList() })
-
-      function renderList(filter = "") {
-        ls.innerHTML = ""
-        let keys = Object.keys(tp).filter(x => x.toLowerCase().includes(filter.toLowerCase()))
-        if (!keys.length) { ls.innerHTML = "<div class='mt' style='padding:10px'>No tpc</div>"; return }
-        keys.forEach((k, i) => {
-          let b = document.createElement("button")
-          b.innerHTML = `<span>${i + 1}</span><span style="text-align;left">${k}</span><span style="color:red;cursor:pointer;" title="Delete"></span>`
-          b.onclick = e => {
-            if (e.target.tagName === "SPAN" && e.target.innerText === "×") {
-              if (confirm(`Delete topic "${k}"?`)) deleteTopicFromDB(k);
-              return
-            }
-            showTopic(k, b)
+    function renderList(filter = "") {
+      ls.innerHTML = ""
+      topicKeys = Object.keys(tp).filter(x => x.toLowerCase().includes(filter.toLowerCase()))
+      if (!topicKeys.length) { ls.innerHTML = "<div class='mt' style='padding:10px'>No topic</div>"; return }
+      topicKeys.forEach((k, i) => {
+        let b = document.createElement("button")
+        b.innerHTML = `<span>${i + 1}</span><span style="text-align:left">${k}</span><span style="color:red;cursor:pointer;" title="Delete">×</span>`
+        b.onclick = e => {
+          if (e.target.tagName === "SPAN" && e.target.innerText === "×") {
+            if (confirm(`Delete topic "${k}"?`)) deleteTopicFromDB(k);
+            return
           }
-          if (k === cur) b.classList.add("act")
-          ls.appendChild(b)
-        })
-      }
-
-      function showTopic(k, b) {
-        cur = k
-        let [ex, u] = tp[k] || ["", ""]
-        Array.from(ls.querySelectorAll("button")).forEach(x => x.classList.remove("act"))
-        if (b) b.classList.add("act")
-        if (innerWidth < 768) {
-          mh.textContent = k
-          mcd.textContent = ex || "// No code"
-          if (u && /^https?:\/\//i.test(u)) { mob.disabled = false; mob.onclick = () => open(u) }
-          else { mob.disabled = true; mob.onclick = null }
-          md.classList.add("act")
-        } else {
-          hd.textContent = k
-          mt.textContent = u || "No url"
-          cd.textContent = ex || "// No code"
-          if (u && /^https?:\/\//i.test(u)) { ob.disabled = false; ob.onclick = () => open(u) }
-          else { ob.disabled = true; ob.onclick = null }
-          pl.style.display = "block"
+          showTopic(k, b, i)
         }
+        if (k === cur) b.classList.add("act")
+        ls.appendChild(b)
+      })
+    }
+
+    function showTopic(k, b, index) {
+      cur = k
+      curIndex = index ?? topicKeys.indexOf(k)
+      let [ex, u] = tp[k] || ["", ""]
+      Array.from(ls.querySelectorAll("button")).forEach(x => x.classList.remove("act"))
+      if (b) b.classList.add("act")
+      if (innerWidth >= 768) {
+        hd.textContent = k
+        mt.textContent = u || "No url"
+        cd.textContent = ex || "// No code"
+        if (u && /^https?:\/\//i.test(u)) { ob.disabled = false; ob.onclick = () => open(u) }
+        else { ob.disabled = true; ob.onclick = null }
+        pl.style.display = "block"
+        updateNavButtons()
+      } else {
+        mh.textContent = k
+        mcd.textContent = ex || "// No code"
+        if (u && /^https?:\/\//i.test(u)) { mob.disabled = false; mob.onclick = () => open(u) }
+        else { mob.disabled = true; mob.onclick = null }
+        md.classList.add("act")
+        updateNavButtons(true)
       }
+    }
 
-      xx.onclick = () => md.classList.remove("act")
-      q.oninput = e => renderList(e.target.value)
+    function updateNavButtons(isModal = false) {
+      const prevBtn = document.getElementById(isModal ? "mprevBtn" : "prevBtn")
+      const nextBtn = document.getElementById(isModal ? "mnextBtn" : "nextBtn")
+      prevBtn.disabled = (curIndex <= 0)
+      nextBtn.disabled = (curIndex >= topicKeys.length - 1)
+      prevBtn.onclick = () => {
+        if (curIndex > 0) showTopic(topicKeys[curIndex - 1], null, curIndex - 1)
+      }
+      nextBtn.onclick = () => {
+        if (curIndex < topicKeys.length - 1) showTopic(topicKeys[curIndex + 1], null, curIndex + 1)
+      }
+    }
 
-      function setCopy(btn, el) {
-        btn.onclick = async () => {
-          let t = el.textContent || ""
-          try { await navigator.clipboard.writeText(t) }
-          catch {
-            let ta = document.createElement("textarea")
-            ta.value = t; document.body.appendChild(ta)
-            ta.select(); document.execCommand("copy"); ta.remove()
-          }
-          btn.textContent = "Copied"
-          setTimeout(() => btn.textContent = "Copy", 800)
+    xx.onclick = () => md.classList.remove("act")
+    q.oninput = e => renderList(e.target.value)
+
+    function setCopy(btn, el) {
+      btn.onclick = async () => {
+        let t = el.textContent || ""
+        try { await navigator.clipboard.writeText(t) }
+        catch {
+          let ta = document.createElement("textarea")
+          ta.value = t; document.body.appendChild(ta)
+          ta.select(); document.execCommand("copy"); ta.remove()
         }
+        btn.textContent = "Copied"
+        setTimeout(() => btn.textContent = "Copy", 800)
       }
-      setCopy(cp, cd)
-      setCopy(mcp, mcd)
+    }
+    setCopy(cp, cd)
+    setCopy(mcp, mcd)
 
-      // Add Topic
-      addBtn.onclick = () => {
-        const name = tn.value.trim(), code = tc.value.trim(), url = tu.value.trim()
-        if (!name) return alert("Topic name required")
-        saveTopicToDB({ name, code, url })
-        tn.value = ""; tc.value = ""; tu.value = ""
-      }
+    addBtn.onclick = () => {
+      const name = tn.value.trim(), code = tc.value.trim(), url = tu.value.trim()
+      if (!name) return alert("Topic name required")
+      saveTopicToDB({ name, code, url })
+      tn.value = ""; tc.value = ""; tu.value = ""
+    }
 
-      // Export JSON
-      exportBtn.onclick = () => {
-        const data = JSON.stringify(tp, null, 2)
-        const blob = new Blob([data], { type: "application/json" })
-        const url = URL.createObjectURL(blob)
-        const a = document.createElement("a")
-        a.href = url; a.download = "c-topics.json"; a.click()
-        URL.revokeObjectURL(url)
-      }
+    exportBtn.onclick = () => {
+      const data = JSON.stringify(tp, null, 2)
+      const blob = new Blob([data], { type: "application/json" })
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement("a")
+      a.href = url; a.download = "java-topics.json"; a.click()
+      URL.revokeObjectURL(url)
+    }
 
-      // Import JSON
-      importInput.onchange = e => {
-        const file = e.target.files[0]
-        if (!file) return
-        const reader = new FileReader()
-        reader.onload = e => {
-          try {
-            const data = JSON.parse(e.target.result)
-            Object.keys(data).forEach(k => saveTopicToDB({ name: k, code: data[k][0], url: data[k][1] }))
-          } catch { alert("Invalid JSON") }
-        }
-        reader.readAsText(file)
+    importInput.onchange = e => {
+      const file = e.target.files[0]
+      if (!file) return
+      const reader = new FileReader()
+      reader.onload = e => {
+        try {
+          const data = JSON.parse(e.target.result)
+          Object.keys(data).forEach(k => saveTopicToDB({ name: k, code: data[k][0], url: data[k][1] }))
+        } catch { alert("Invalid JSON") }
       }
+      reader.readAsText(file)
+    }
   </script>
 
   <div style="text-align:center;padding:1rem;font-size:.75rem;color:var(--mt)">Microintel</div>
