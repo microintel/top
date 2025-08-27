@@ -153,8 +153,8 @@
       <div class="lang-buttons" id="langButtons"></div>
       <div id="popupBody"></div>
       <div class="code-actions">
-        <button id="askGoogleBtn">Ask Google</button>
-        <button id="askAIBtn">Explain with AI</button>
+        <button id="askGoogleBtn">Google</button>
+        <button id="askAIBtn">chatGPT</button>
       </div>
       <div class="nav-buttons">
         <button class="back" id="prevBtn">← Previous</button>
@@ -305,8 +305,8 @@
       const code = document.querySelector('#popupBody pre').innerText;
       if (code) {
         const q = `Explain this ${cLang} code: ${code}`;
-        const url = `https://www.google.com/search?q=${code}&udm=50`;
-          location.href = url;
+        const url = `https://www.google.com/search?q=${q}&udm=50`;
+        window.open(url, '_blank');
       }
     };
 
@@ -315,7 +315,7 @@
       if (code) {
         const q = `Explain this ${cLang} code: ${code}`;
         const url = `https://chat.openai.com/?prompt=${encodeURIComponent(q) }`;
-        location.href = url;
+        window.open(url, '_blank');
       }
     };
 
