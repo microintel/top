@@ -1,493 +1,265 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>java top</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    :root {
-      --bg: #0f172a;
-      --pl: #111827;
-      --mt: #94a3b8;
-      --tx: #e5e7eb;
-      --ac: #22d3ee;
-      --b1: #2563eb;
-      --b2: #374151;
-      --cd: #0b1020;
-      --rg: #334155;
-      --btn-bg: #4b5563
-    }
-
-    * {
-      box-sizing: border-box
-    }
-
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      background: var(--bg);
-      color: var(--tx);
-      font-family: system-ui, Arial;
-      line-height: 1.5
+      background: #f8f9fa;
     }
 
-    .wp {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      overflow-y: scroll
+    header {
+      padding: 10px;
+      background: black;
+      color: white;
+      text-align: center;
     }
 
-    aside {
-      padding: 1rem;
-      background: var(--pl);
-      position: relative
+    .topic-list {
+      padding: 10px;
+      background-color: #000;
     }
 
-    .sr {
-      display: flex;
-      gap: .5rem;
-      margin-bottom: 1rem
-    }
-
-    .sr input {
-      width: 100%;
-      padding: .625rem .75rem;
-      border: 1px solid var(--rg);
-      border-radius: 10px;
-      background: var(--cd);
-      color: var(--tx)
-    }
-
-    .ls {
-      overflow-y: auto;
-      padding-right: .25rem
-    }
-
-    .ls button {
-      width: 100%;
-      text-align: left;
-      padding: .625rem .75rem;
-      border: 1px solid transparent;
-      background: transparent;
-      color: var(--tx);
-      border-radius: 10px;
+    .topic {
+      background: black;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       cursor: pointer;
-      margin: .125rem 0;
-      transition: .2s;
-      display: flex;
-      justify-content: space-between;
-      align-items: center
     }
 
-    .ls button:hover {
-      background: var(--cd);
-      border-color: grey
+    .topic h3 {
+      margin: 0;
+      font-size: 16px;
+      color: white;
     }
 
-    .ls button.act {
-      outline: 2px solid grey;
-      background: var(--cd)
-    }
-
-    .md {
+  
+    .popup {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, .8);
+      right: 0;
+      bottom: 0;
+      background: #000;
       display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000
-    }
-
-    .md.act {
-      display: flex
-    }
-
-    .mc {
-      background: var(--pl);
-      border-radius: 14px;
-      width: 90%;
-      max-height: 90%;
-      display: flex;
       flex-direction: column;
-      overflow: hidden
     }
 
-    .mh {
+    .popup-header {
+      background: #000;
+      color: #fff;
+      padding: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: .75rem 1rem;
-      border-bottom: 1px solid var(--rg)
     }
 
-    .mh .x {
-      font-size: 1.5rem;
-      cursor: pointer;
-      background: none;
+    .popup-header h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .popup-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 15px;
+      height: 300px;
+    }
+
+    .lang-buttons {
+      margin: 10px 0;
+    }
+
+    .lang-buttons button {
+      margin-right: 10px;
+      padding: 6px 12px;
       border: none;
-      color: var(--mt)
+      border-radius: 6px;
+      cursor: pointer;
     }
 
-    .mb {
-      flex-grow: 1;
-      overflow-y: auto
-    }
-
-    .pln {
-      display: none;
-      border-radius: 14px;
-      overflow: hidden;
-      background: var(--cd);
-      margin: 1rem
-    }
-
-    .pln hd {
-      display: block;
-      padding: .75rem 1rem;
-      border-bottom: 1px solid var(--rg);
-      font-weight: 600
-    }
-
-    .cw {
-      background: var(--cd)
+    .lang-buttons button.active {
+      background: #007bff;
+      color: white;
     }
 
     pre {
-      margin: 0;
-      padding: 1rem;
-      overflow: auto
+      background: #f1f1f1;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
     }
 
-    code {
-      font-family: monospace;
-      font-size: .8125rem;
-      color: lawngreen
+    a {
+      color: #007bff;
+      text-decoration: none;
     }
 
-    .acs {
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .nav-buttons {
       display: flex;
-      gap: .625rem;
-      padding: .75rem;
-      background: var(--cd);
-      border-top: 1px solid var(--rg)
+      justify-content: space-between;
+      margin-top: 15px;
     }
 
-    .bt {
-      padding: .625rem .875rem;
-      border-radius: 10px;
-      border: 1px solid transparent;
+    .nav-buttons button,
+    .close {
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
       cursor: pointer;
-      font-weight: 600;
-      color: #fff;
-      background: var(--b1)
     }
 
-    .bt.s2 {
-      background: var(--b2)
+    .close {
+      background: red;
+      color: white;
     }
 
-    .bt[disabled] {
-      opacity: .5;
-      cursor: not-allowed
+    .back {
+      background: #6c757d;
+      color: white;
     }
 
-    h1,
-    h2 {
-      font-size: 1.25rem;
-      margin: 0
+    .forward {
+      background: #28a745;
+      color: white;
     }
 
-    .mt {
-      color: var(--mt);
-      font-size: .75rem
-    }
-
-    .tc {
-      padding: 1rem
-    }
-
-    @media(min-width:768px) {
-      .wp {
-        display: grid;
-        grid-template-columns: 320px 1fr
-      }
-
-      aside {
-        border-right: 1px solid var(--rg);
-        display: flex;
-        flex-direction: column
-      }
-
-      .md {
-        display: none !important
-      }
-
-      .tc {
-        padding: 0
-      }
+    #popupBody pre {
+      min-height: 30vh;
+      max-height: 70vh;
     }
   </style>
 </head>
 
 <body>
-  <div class="wp">
-    <aside>
-      <div style="margin-bottom:1rem">
-        <h2>Java Topics </h2>
-        <div class="mt">Data is gatherd from W3Schools</div>
-      </div>
-      <div class="sr">
-        <input id="q" placeholder="Search..." autocomplete="off">
-      </div>
-      <div class="ls" id="ls"></div>
-    </aside>
-
-    <main class="mn">
-      <div>
-        <h1 id="hd"></h1>
-        <div class="mt" id="mt"></div>
-      </div>
-      <section class="pln" id="pl">
-        <hd>Code</hd>
-        <div class="cw">
-          <pre><code id="cd"></code></pre>
-        </div>
-        <div class="acs">
-          <button class="bt" id="prevBtn">⬅ Prev</button>
-          <button class="bt" id="nextBtn">Next ➡</button>
-          <button class="bt" id="ob" disabled>Open</button>
-          <button class="bt s2" id="cp">Copy</button>
-          <button class="bt" onclick="goCgpt('cd')"> Ask ChatGPT</button>
-          <button class="bt" onclick="goGOO('cd')"> Google AI Mode</button>
-        </div>
-      </section>
-
-      <section style="display:none;padding:1rem;background:var(--pl);border-top:1px solid var(--rg);margin-top:1rem;">
-        <h2>Add Topic</h2>
-        <input id="tn" placeholder="Topic Name" style="width:100%;margin:.25rem 0;padding:.5rem;border-radius:8px">
-        <textarea id="tc" placeholder="Example Code" style="width:100%;margin:.25rem 0;padding:.5rem;border-radius:8px"
-          rows="4"></textarea>
-        <input id="tu" placeholder="Output URL" style="width:100%;margin:.25rem 0;padding:.5rem;border-radius:8px">
-        <button id="addTopic" class="bt" style="margin-top:.5rem;">Add Topic</button>
-        <button id="exportJSON" class="bt s2" style="margin-top:.5rem;">Export JSON</button>
-        <input type="file" id="importJSON" style="margin-top:.5rem;">
-      </section>
-    </main>
-
-    <div class="md" id="md">
-      <div class="mc">
-        <div class="mh">
-          <h2 id="mh"></h2>
-          <button class="x" id="xx">&times;</button>
-        </div>
-        <div class="mb">
-          <section class="pln" style="display:block;margin:0">
-            <div style="display: flex;justify-content: space-around;align-items: center;">
-           
-            <button class="bt" id="mprevBtn">⬅</button>
-             <hd>Code</hd>
-              <button class="bt" id="mnextBtn">➡</button>
-              </div>
-            <div class="cw">
-              <pre><code id="mcd"></code></pre>
-            </div>
-            <div class="acs">
-              
-              <button class="bt" id="mob" disabled>Open</button>
-              <button class="bt s2" id="mcp">Copy</button>
-              <button class="bt" style="font-size: 0.9rem;" onclick="goCgpt('mcd')"> ChatGPT</button>
-              <button class="bt" style="font-size: 0.9rem;" onclick="goGOO('mcd')"> Google</button>
-            </div>
-          </section>
-        </div>
+  <header>
+    <h2>Java Lang Topic</h2>
+  </header>
+  <div class="topic-list" id="topicList"></div>
+  <div class="popup" id="popup">
+    <div class="popup-header">
+      <button class="close" id="closeBtn">X</button>
+      <h2 id="popupTitle"></h2>
+    </div>
+    <div class="popup-body">
+      <div class="lang-buttons" id="langButtons"></div>
+      <div id="popupBody"></div>
+      <div class="nav-buttons">
+        <button class="back" id="prevBtn">← Previous</button>
+        <button class="forward" id="nextBtn">Next →</button>
       </div>
     </div>
   </div>
-
   <script>
-    let tp = {}, cur = null
-    const ls = document.getElementById("ls")
-    const q = document.getElementById("q")
-    const hd = document.getElementById("hd")
-    const mt = document.getElementById("mt")
-    const cd = document.getElementById("cd")
-    const ob = document.getElementById("ob")
-    const cp = document.getElementById("cp")
-    const pl = document.getElementById("pl")
-    const md = document.getElementById("md")
-    const xx = document.getElementById("xx")
-    const mh = document.getElementById("mh")
-    const mcd = document.getElementById("mcd")
-    const mob = document.getElementById("mob")
-    const mcp = document.getElementById("mcp")
-    const tn = document.getElementById("tn")
-    const tc = document.getElementById("tc")
-    const tu = document.getElementById("tu")
-    const addBtn = document.getElementById("addTopic")
-    const exportBtn = document.getElementById("exportJSON")
-    const importInput = document.getElementById("importJSON")
+    let dataSets = {}; 
+    let unifiedTopics = []; 
+    let currentTopicIndex = 0;
+    let currentLang = "Java";
 
-    function goCgpt(t) {
-      t = document.getElementById(t).textContent || "";
-      let e = encodeURIComponent("Explain this java snippet :\n\n" + t);
-      window.open("https://chat.openai.com/?prompt=" + e, "_blank");
+
+    function normalize(str) {
+      return str.toLowerCase()
+        .replace(/java|c\+\+|c#|csharp|python|javascript|js|c/g, "")
+        .replace(/[^a-z0-9]/g, "")
+        .trim();
     }
 
-    function goGOO(t) {
-      t = document.getElementById(t).innerText || "";
-      let e = encodeURIComponent("Explain this java snippet :\n\n" + t);
-     window.open(`https://www.google.com/search?q=${e}&udm=50`, "_blank");
-    }
-
-    let db
-    const request = indexedDB.open("CtopicsDB", 1)
-    request.onupgradeneeded = e => {
-      db = e.target.result
-      if (!db.objectStoreNames.contains("topics")) db.createObjectStore("topics", { keyPath: "name" })
-    }
-    request.onsuccess = e => { db = e.target.result; loadTopicsFromDB() }
-    request.onerror = e => console.error("DB error", e)
-
-    function saveTopicToDB(topic) {
-      const tx = db.transaction("topics", "readwrite")
-      const store = tx.objectStore("topics")
-      store.put(topic)
-      tx.oncomplete = () => { tp[topic.name] = [topic.code, topic.url]; renderList() }
-    }
-
-    function deleteTopicFromDB(name) {
-      const tx = db.transaction("topics", "readwrite")
-      const store = tx.objectStore("topics")
-      store.delete(name)
-      tx.oncomplete = () => { delete tp[name]; renderList() }
-    }
-
-    function loadTopicsFromDB() {
-      const tx = db.transaction("topics", "readonly")
-      const store = tx.objectStore("topics")
-      store.getAll().onsuccess = e => {
-        const topics = e.target.result
-        topics.forEach(t => tp[t.name] = [t.code, t.url])
-        renderList()
-      }
-    }
-
-    fetch("https://microintel.github.io/top/tops/java-top.json")
-      .then(r => r.json())
-      .then(data => { tp = data; renderList() })
-
-    let topicKeys = [], curIndex = -1
-
-    function renderList(filter = "") {
-      ls.innerHTML = ""
-      topicKeys = Object.keys(tp).filter(x => x.toLowerCase().includes(filter.toLowerCase()))
-      if (!topicKeys.length) { ls.innerHTML = "<div class='mt' style='padding:10px'>No topic</div>"; return }
-      topicKeys.forEach((k, i) => {
-        let b = document.createElement("button")
-        b.innerHTML = `<span>${i + 1}</span><span style="text-align:left">${k}</span><span style="color:red;cursor:pointer;" title="Delete"></span>`
-        b.onclick = e => {
-          if (e.target.tagName === "SPAN" && e.target.innerText === "×") {
-            if (confirm(`Delete topic "${k}"?`)) deleteTopicFromDB(k);
-            return
-          }
-          showTopic(k, b, i)
+    function findMatch(topic, dataset) {
+      const normTopic = normalize(topic);
+      let bestKey = "", bestScore = 0;
+      Object.keys(dataset).forEach(key => {
+        const normKey = normalize(key);
+        let score = 0;
+        if (normKey.includes(normTopic) || normTopic.includes(normKey)) {
+          score = Math.min(normKey.length, normTopic.length);
         }
-        if (k === cur) b.classList.add("act")
-        ls.appendChild(b)
-      })
+        if (score > bestScore) { bestScore = score; bestKey = key; }
+      });
+      return bestKey;
     }
 
-    function showTopic(k, b, index) {
-      cur = k
-      curIndex = index ?? topicKeys.indexOf(k)
-      let [ex, u] = tp[k] || ["", ""]
-      Array.from(ls.querySelectorAll("button")).forEach(x => x.classList.remove("act"))
-      if (b) b.classList.add("act")
-      if (innerWidth >= 768) {
-        hd.textContent = k
-        mt.textContent = u || "No url"
-        cd.textContent = ex || "// No code"
-        if (u && /^https?:\/\//i.test(u)) { ob.disabled = false; ob.onclick = () => open(u) }
-        else { ob.disabled = true; ob.onclick = null }
-        pl.style.display = "block"
-        updateNavButtons()
+    async function loadData() {
+
+      const files = {
+
+        "Java": "https://microintel.github.io/top/tops/java-top.json",
+        "C": "https://microintel.github.io/top/tops/c-top.json"
+        // "python": "https://microintel.github.io/top/tops/java-top.json",
+      };
+
+      for (const [lang, file] of Object.entries(files)) {
+        const res = await fetch(file);
+        dataSets[lang] = await res.json();
+      }
+
+ 
+      unifiedTopics = Object.keys(dataSets["Java"]);
+
+      const list = document.getElementById("topicList");
+      unifiedTopics.forEach((topic, idx) => {
+        const div = document.createElement("div");
+        div.className = "topic";
+        div.innerHTML = `<h3> ${idx+1}. ${topic.charAt(0).toUpperCase() + topic.slice(1)}</h3>`;
+        div.onclick = () => openPopup(idx);
+        list.appendChild(div);
+      });
+    }
+
+    function openPopup(index) {
+      currentTopicIndex = index;
+      renderPopup();
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function renderPopup() {
+
+      const topic = unifiedTopics[currentTopicIndex];
+      document.getElementById("popupTitle").innerText = topic.charAt(0).toUpperCase() + topic.slice(1);
+
+      
+      const langButtonsDiv = document.getElementById("langButtons");
+      langButtonsDiv.innerHTML = "";
+      for (const lang in dataSets) {
+        const btn = document.createElement("button");
+        btn.innerText = lang;
+        btn.classList.toggle("active", lang === currentLang);
+        btn.onclick = () => { currentLang = lang; renderPopup(); };
+        langButtonsDiv.appendChild(btn);
+      }
+
+      const body = document.getElementById("popupBody");
+      const dataset = dataSets[currentLang];
+      let bestKey = findMatch(topic, dataset);
+      let content = dataset[bestKey];
+
+      if (content) {
+        body.innerHTML = `
+          <pre>${content[0] || ""}</pre>  ${content[1] ? `<a href="${content[1]}" target="_blank">output</a>` : ""}
+    `;
       } else {
-        mh.textContent = k
-        mcd.textContent = ex || "// No code"
-        if (u && /^https?:\/\//i.test(u)) { mob.disabled = false; mob.onclick = () => open(u) }
-        else { mob.disabled = true; mob.onclick = null }
-        md.classList.add("act")
-        updateNavButtons(true)
+        body.innerHTML = `<p style="color:red;">No ${currentLang} version found.</p>`;
       }
     }
 
-    function updateNavButtons(isModal = false) {
-      const prevBtn = document.getElementById(isModal ? "mprevBtn" : "prevBtn")
-      const nextBtn = document.getElementById(isModal ? "mnextBtn" : "nextBtn")
-      prevBtn.disabled = (curIndex <= 0)
-      nextBtn.disabled = (curIndex >= topicKeys.length - 1)
-      prevBtn.onclick = () => {
-        if (curIndex > 0) showTopic(topicKeys[curIndex - 1], null, curIndex - 1)
-      }
-      nextBtn.onclick = () => {
-        if (curIndex < topicKeys.length - 1) showTopic(topicKeys[curIndex + 1], null, curIndex + 1)
-      }
-    }
+    document.getElementById("prevBtn").onclick = () => {
+      if (currentTopicIndex > 0) { currentTopicIndex--; renderPopup(); }
+    };
+    document.getElementById("nextBtn").onclick = () => {
+      if (currentTopicIndex < unifiedTopics.length - 1) { currentTopicIndex++; renderPopup(); }
+    };
 
-    xx.onclick = () => md.classList.remove("act")
-    q.oninput = e => renderList(e.target.value)
+    document.getElementById("closeBtn").onclick = () => { document.getElementById("popup").style.display = "none"; };
 
-    function setCopy(btn, el) {
-      btn.onclick = async () => {
-        let t = el.textContent || ""
-        try { await navigator.clipboard.writeText(t) }
-        catch {
-          let ta = document.createElement("textarea")
-          ta.value = t; document.body.appendChild(ta)
-          ta.select(); document.execCommand("copy"); ta.remove()
-        }
-        btn.textContent = "Copied"
-        setTimeout(() => btn.textContent = "Copy", 800)
-      }
-    }
-    setCopy(cp, cd)
-    setCopy(mcp, mcd)
-
-    addBtn.onclick = () => {
-      const name = tn.value.trim(), code = tc.value.trim(), url = tu.value.trim()
-      if (!name) return alert("Topic name required")
-      saveTopicToDB({ name, code, url })
-      tn.value = ""; tc.value = ""; tu.value = ""
-    }
-
-    exportBtn.onclick = () => {
-      const data = JSON.stringify(tp, null, 2)
-      const blob = new Blob([data], { type: "application/json" })
-      const url = URL.createObjectURL(blob)
-      const a = document.createElement("a")
-      a.href = url; a.download = "java-topics.json"; a.click()
-      URL.revokeObjectURL(url)
-    }
-
-    importInput.onchange = e => {
-      const file = e.target.files[0]
-      if (!file) return
-      const reader = new FileReader()
-      reader.onload = e => {
-        try {
-          const data = JSON.parse(e.target.result)
-          Object.keys(data).forEach(k => saveTopicToDB({ name: k, code: data[k][0], url: data[k][1] }))
-        } catch { alert("Invalid JSON") }
-      }
-      reader.readAsText(file)
-    }
+    loadData();
   </script>
-
-  <div style="text-align:center;padding:1rem;font-size:.75rem;color:var(--mt)">Microintel</div>
 </body>
 
 </html>
