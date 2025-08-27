@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Python Lang Topic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+    }
+    header {
+      padding: 10px;
+      background: black;
+      color: white;
+      text-align: center;
+    }
+    .topic-list {
+      padding: 10px;
+      background-color: #000;
+    }
+    .topic {
+      background: black;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+    .topic h3 {
+      margin: 0;
+      font-size: 16px;
+      color: white;
+    }
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      flex-direction: column;
+    }
+    .popup-header {
+      background: #000;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .popup-header h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+    .popup-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 15px;
+      height: 300px;
+      min-height:350px;
+    }
+    .lang-buttons {
+      margin: 10px 0;
+      text-align: center;
+    }
+    .lang-buttons button {
+      margin-right: 10px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .lang-buttons button.active {
+      background: #007bff;
+      color: white;
+    }
+    pre {
+      background: #f1f1f1;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+      color: black;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .nav-buttons, .code-actions {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 15px;
+    }
+    .nav-buttons button, .code-actions button, .close {
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      color: white;
+    }
+    .close {
+      background: red;
+      color: white;
+    }
+    .back {
+      background: #6c757d;
+    }
+    .forward {
+      background: #28a745;
+    }
+    .code-actions button {
+      background: #007bff;
+      margin: 0 5px;
+    }
+    #popupBody pre {
+      min-height: 30vh;
+      max-height: 70vh;
+    }
+    #no-data-msg {
+      color: red;
+    }
+    #searchContainer {
+        padding: 10px;
+        background: black;
+    }
+    #searchInput {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Python Lang Topic</h2>
+  </header>
+  <div id="searchContainer">
+    <input type="text" id="searchInput" placeholder="Search topics...">
+  </div>
+  <div class="topic-list" id="topicList"></div>
+  <div class="popup" id="popup">
+    <div class="popup-header">
+      <h2 id="popupTitle"></h2>
+      <button class="close" id="closeBtn">X</button>
+    </div>
+    <div class="popup-body">
+      <div class="lang-buttons" id="langButtons"></div>
+      <div id="popupBody"></div>
+      <div class="code-actions">
+        <button id="askGoogleBtn">Google</button>
+        <button id="askAIBtn">chatGPT</button>
+      </div>
+      <div class="nav-buttons">
+        <button class="back" id="prevBtn">← Previous</button>
+        <button class="forward" id="nextBtn">Next →</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    let d = {};
+    let t = [];
+    let cIdx = 0;
+    let cLang = "python";
+
+    function normalize(s) {
+      return s.toLowerCase()
+        .replace(/java|c\+\+|c#|csharp|python|javascript|js|c/g, "")
+        .replace(/[^a-z0-9]/g, "")
+        .trim();
+    }
+
+    function findMatch(topic, ds) {
+      const nTopic = normalize(topic);
+      let bKey = "",
+        bScore = 0;
+      Object.keys(ds).forEach(key => {
+        const nKey = normalize(key);
+        let score = 0;
+        if (nKey.includes(nTopic) || nTopic.includes(nKey)) {
+          score = Math.min(nKey.length, nTopic.length);
+        }
+        if (score > bScore) {
+          bScore = score;
+          bKey = key;
+        }
+      });
+      return bKey;
+    }
+
+    async function loadData() {
+      const files = {
+      "python": "https://microintel.github.io/top/tops/python-top.json",
+        "C": "https://microintel.github.io/top/tops/c-top.json",
+        "Java": "https://microintel.github.io/top/tops/java-top.json"
+      };
+
+      for (const [lang, file] of Object.entries(files)) {
+        try {
+          const res = await fetch(file);
+          if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+          d[lang] = await res.json();
+        } catch (e) {
+          console.error(`Could not load data for ${lang}:`, e);
+          d[lang] = {};
+        }
+      }
+
+      t = Object.values(d["python"]);
+      
+      renderTopicList();
+    }
+
+    function renderTopicList() {
+      const list = document.getElementById("topicList");
+      list.innerHTML = "";
+      if (t.length === 0) {
+        list.innerHTML = `<p id="no-data-msg">Could not load topics. Please check your network connection.</p>`;
+        return;
+      }
+      t.forEach((topic, idx) => {
+        const div = document.createElement("div");
+        div.className = "topic";
+        
+        div.innerHTML = `<h3>${idx + 1}. ${topic.charAt(0).toUpperCase() + topic.slice(1)}</h3>`;
+        div.onclick = () => openPopup(idx);
+        list.appendChild(div);
+      });
+    }
+
+    function filterTopics() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const topics = document.querySelectorAll(".topic");
+      topics.forEach(topic => {
+        const topicText = topic.querySelector('h3').innerText.toLowerCase();
+        if (topicText.includes(query)) {
+          topic.style.display = 'block';
+        } else {
+          topic.style.display = 'none';
+        }
+      });
+    }
+
+    function openPopup(idx) {
+      cIdx = idx;
+      renderPopup();
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function renderPopup() {
+      const topic = t[cIdx];
+      const pTitle = document.getElementById("popupTitle");
+      const pLangBtns = document.getElementById("langButtons");
+      const pBody = document.getElementById("popupBody");
+
+      pTitle.innerText = topic.charAt(0).toUpperCase() + topic.slice(1);
+      pLangBtns.innerHTML = "";
+
+      for (const lang in d) {
+        const btn = document.createElement("button");
+        btn.innerText = lang;
+        btn.classList.toggle("active", lang === cLang);
+        btn.onclick = () => {
+          cLang = lang;
+          renderPopup();
+        };
+        pLangBtns.appendChild(btn);
+      }
+
+      const ds = d[cLang];
+      let bKey = findMatch(topic, ds);
+      let content = ds[bKey];
+
+      if (content && content[0]) {
+        pBody.innerHTML = `
+          <pre>${content[0]}</pre>
+          ${content[1] ? `<a href="${content[1]}" target="_blank">output</a>` : ""}
+        `;
+      } else {
+        pBody.innerHTML = `<p style="min-height:300px;color:white; text-align:center;" id="no-data-msg"> Working....</p>`;
+      }
+    }
+
+    document.getElementById("prevBtn").onclick = () => {
+      if (cIdx > 0) {
+        cIdx--;
+        renderPopup();
+      }
+    };
+
+    document.getElementById("nextBtn").onclick = () => {
+      if (cIdx < t.length - 1) {
+        cIdx++;
+        renderPopup();
+      }
+    };
+
+    document.getElementById("closeBtn").onclick = () => {
+      document.getElementById("popup").style.display = "none";
+    };
+
+    document.getElementById("askGoogleBtn").onclick = () => {
+      const code = document.querySelector('#popupBody pre').innerText;
+      if (code) {
+        const q = `Explain this ${cLang} code: ${code}`;
+        const url = `https://www.google.com/search?q=${q}&udm=50`;
+        window.open(url, '_blank');
+      }
+    };
+
+    document.getElementById("askAIBtn").onclick = () => {
+      const code = document.querySelector('#popupBody pre').innerText;
+      if (code) {
+        const q = `Explain this ${cLang} code: ${code}`;
+        const url = `https://chat.openai.com/?prompt=${encodeURIComponent(q) }`;
+        window.open(url, '_blank');
+      }
+    };
+
+    document.getElementById("searchInput").onkeyup = filterTopics;
+
+    window.onload = loadData;
+  </script>
+</body>
+</html>
