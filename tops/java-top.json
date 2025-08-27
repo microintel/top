@@ -1,111 +1,111 @@
 {
   "Java Syntax": [
-    "Main.javapublic class Main {  public static void main(String[] args) {    System.out.println(\"Hello World\");  }}",
+    "Main.javapublic class Main {\n  public static void main(String[] args) {\n    System.out.println(\"Hello World\");\n  }\n}\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_helloworld"
   ],
   "The main Method": "public static void main(String[] args)",
   "Print Text": [
-    "System.out.println(\"Hello World!\");",
+    "System.out.println(\"Hello World!\");\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_output"
   ],
   "Double Quotes": [
-    "System.out.println(\"This sentence will work!\"); // correctSystem.out.println(This sentence will produce an error); // wrong",
+    "System.out.println(\"This sentence will work!\");\n // correctSystem.out.println(This sentence will produce an error);\n // wrong",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_output_quotes_err"
   ],
   "printf function": [
-    "System.out.print(\"Hello World! \");System.out.print(\"I will print on the same line.\");",
+    "System.out.print(\"Hello World! \");\nSystem.out.print(\"I will print on the same line.\");\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_output_print"
   ],
   "Print Numbers": [
-    "System.out.println(3);System.out.println(358);System.out.println(50000);",
+    "System.out.println(3);\nSystem.out.println(358);\nSystem.out.println(50000);\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_output_numbers1"
   ],
   "comments single line": [
-    "// This is a commentSystem.out.println(\"Hello World\");",
+    "// This is a commentSystem.out.println(\"Hello World\");\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_single_comment"
   ],
   "comments multiple line": [
-    "/* The code below will print the words Hello Worldto the screen, and it is amazing */System.out.println(\"Hello World\");",
+    "/* The code below will print the words Hello Worldto the screen, and it is amazing */System.out.println(\"Hello World\");\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_multi_comment"
   ],
   "Java Variables": "abcd",
   "Declaring Variables": [
-    "type variableName = value;String name = \"John\";",
+    "type variableName = value;\nString name = \"John\";\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_variables"
   ],
   "Final Variables": [
-    "final int myNum = 15;myNum = 20;  // will generate an error: cannot assign a value to a final variable",
+    "final int myNum = 15;\nmyNum = 20;\n  // will generate an error: cannot assign a value to a final variable",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_variables_final"
   ],
   "Display Variables": [
-    "String name = \"John\";System.out.println(\"Hello \" + name);",
+    "String name = \"John\";\nSystem.out.println(\"Hello \" + name);\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_variables2"
   ],
   "Declare Many Variables": [
-    "int x = 5;int y = 6;int z = 50;System.out.println(x + y + z);",
+    "int x = 5;\nint y = 6;\nint z = 50;\nSystem.out.println(x + y + z);\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_variables5"
   ],
   "One Value to Multiple Variables": [
-    "int x, y, z;x = y = z = 50;System.out.println(x + y + z);",
+    "int x, y, z;\nx = y = z = 50;\nSystem.out.println(x + y + z);\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_variables_multi2"
   ],
   "Identifiers": [
-    "All Java variables must be identified with unique names.These unique names are called identifiers.// Goodint minutesPerHour = 60;// OK, but not so easy to understand what m actually isint m = 60;",
+    "All Java variables must be identified with unique names.These unique names are called identifiers.// Goodint minutesPerHour = 60;\n// OK, but not so easy to understand what m actually isint m = 60;\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_variables_identifiers"
   ],
   "Java Data Types": [
-    "int myNum = 5;               // Integer (whole number)float myFloatNum = 5.99f;    // Floating point numberchar myLetter = 'D';         // Characterboolean myBool = true;       // BooleanString myText = \"Hello\";     // String",
+    "int myNum = 5;\n               // Integer (whole number)float myFloatNum = 5.99f;\n    // Floating point numberchar myLetter = 'D';\n         // Characterboolean myBool = true;\n       // BooleanString myText = \"Hello\";\n     // String",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_data_types"
   ],
   "Primitive Data Types": "byte\tStores from -128 to 127short\tStores from -32,768 to 32,767int\tStores from -2,147,483,648 to 2,147,483,647long\tStoresfrom -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807float\tStores fractional numbers. 6 to 7 digitdouble\tStores fractional numbers. 15 digitboolean\tStores true or false valueschar\tStores a single character/letter or ASCII values",
   "Byte": [
-    "byte myNum = 100;System.out.println(myNum);",
+    "byte myNum = 100;\nSystem.out.println(myNum);\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_type_byte"
   ],
   "Short": [
-    "short myNum = 5000;System.out.println(myNum);",
+    "short myNum = 5000;\nSystem.out.println(myNum);\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_type_short"
   ],
   "Int": [
-    "int myNum = 100000;System.out.println(myNum);",
+    "int myNum = 100000;\nSystem.out.println(myNum);\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_type_int"
   ],
   "Long": [
-    "long myNum = 15000000000L;System.out.println(myNum);",
+    "long myNum = 15000000000L;\nSystem.out.println(myNum);\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_type_long"
   ],
   "Floating Point Types": [
-    "float myNum = 5.75f;System.out.println(myNum);",
+    "float myNum = 5.75f;\nSystem.out.println(myNum);\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_type_float"
   ],
   "Doublr Point Types": [
-    "double myNum = 19.99d;System.out.println(myNum);",
+    "double myNum = 19.99d;\nSystem.out.println(myNum);\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_type_double"
   ],
   "Scientific Numbers": [
-    "float f1 = 35e3f;double d1 = 12E4d;System.out.println(f1);System.out.println(d1);",
+    "float f1 = 35e3f;\ndouble d1 = 12E4d;\nSystem.out.println(f1);\nSystem.out.println(d1);\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_type_scientific"
   ],
   "Boolean Types": [
-    "boolean isJavaFun = true;boolean isFishTasty = false;System.out.println(isJavaFun);     // Outputs trueSystem.out.println(isFishTasty);   // Outputs false",
+    "boolean isJavaFun = true;\nboolean isFishTasty = false;\nSystem.out.println(isJavaFun);\n     // Outputs trueSystem.out.println(isFishTasty);\n   // Outputs false",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_booleans"
   ],
   "Characters": [
-    "char myGrade = 'B';System.out.println(myGrade);",
+    "char myGrade = 'B';\nSystem.out.println(myGrade);\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_type_char"
   ],
   "Strings": [
-    "String greeting = \"Hello World\";System.out.println(greeting);",
+    "String greeting = \"Hello World\";\nSystem.out.println(greeting);\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_type_string"
   ],
   "Non-Primitive Data Types": "string array class",
   "Java Type Casting": "Widening Casting (automatically) - converting a smaller type to a larger type sizebyte -> short -> char -> int -> long -> float -> doubleNarrowing Casting (manually) - converting a larger type to a smaller size typedouble -> float -> long -> int -> char -> short -> byte",
   "Widening Casting / Implicit Conversion": [
-    "int myInt = 9;    double myDouble = myInt; // Automatic casting: int to double    System.out.println(myInt);      // Outputs 9    System.out.println(myDouble);",
+    "int myInt = 9;\n    double myDouble = myInt;\n // Automatic casting: int to double    System.out.println(myInt);\n      // Outputs 9    System.out.println(myDouble);\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_casting_wide"
   ],
   "Narrowing Casting / Explicit Conversion": [
-    "double myDouble = 9.78d;    int myInt = (int) myDouble; // Manual casting: double to int    System.out.println(myDouble);   // Outputs 9.78    System.out.println(myInt);",
+    "double myDouble = 9.78d;\n    int myInt = (int) myDouble;\n // Manual casting: double to int    System.out.println(myDouble);\n   // Outputs 9.78    System.out.println(myInt);\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_casting_narrow"
   ],
   "operators": [
@@ -113,28 +113,28 @@
     "https://www.w3schools.com/java/java_operators.asp"
   ],
   "Java Strings": [
-    "String greeting = \"Hello\";",
+    "String greeting = \"Hello\";\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_strings"
   ],
   "String Length": [
-    "String txt = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\";System.out.println(\"The length of the txt string is: \" + txt.length());",
+    "String txt = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\";\nSystem.out.println(\"The length of the txt string is: \" + txt.length());\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_strings_length"
   ],
   "more String Methods": [
-    "String txt = \"Hello World\";System.out.println(txt.toUpperCase());   // Outputs \"HELLO WORLD\"System.out.println(txt.toLowerCase());   // Outputs \"hello world\"",
+    "String txt = \"Hello World\";\nSystem.out.println(txt.toUpperCase());\n   // Outputs \"HELLO WORLD\"System.out.println(txt.toLowerCase());\n   // Outputs \"hello world\"",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_strings_touppercase"
   ],
   "Finding a Character in a String": [
-    "String txt = \"Please locate where 'locate' occurs!\";System.out.println(txt.indexOf(\"locate\")); // Outputs 7",
+    "String txt = \"Please locate where 'locate' occurs!\";\nSystem.out.println(txt.indexOf(\"locate\"));\n // Outputs 7",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_strings_indexof"
   ],
   "Complete String Reference": "https://www.w3schools.com/java/java_ref_string.asp",
   "String Concatenation": [
-    "String firstName = \"John\";String lastName = \"Doe\";System.out.println(firstName + \" \" + lastName);",
+    "String firstName = \"John\";\nString lastName = \"Doe\";\nSystem.out.println(firstName + \" \" + lastName);\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_strings_conc"
   ],
   "concat()": [
-    "String firstName = \"John \";String lastName = \"Doe\";System.out.println(firstName.concat(lastName));",
+    "String firstName = \"John \";\nString lastName = \"Doe\";\nSystem.out.println(firstName.concat(lastName));\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_strings_conc2"
   ],
   "Adding Numbers and Strings": [
@@ -142,7 +142,7 @@
     "https://www.w3schools.com/java/java_strings_numbers.asp"
   ],
   "Strings - Special Characters": [
-    "\\'\t'\tSingle quote\\\"\t\"\tDouble quote\\\\\t\\\tBackslashString txt = \"We are the so-called \\\"Vikings\\\" from the north.\";",
+    "\\'\t'\tSingle quote\\\"\t\"\tDouble quote\\\\\t\\\tBackslashString txt = \"We are the so-called \\\"Vikings\\\" from the north.\";\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_strings_double_quote"
   ],
   "Complete Math Reference": [
@@ -150,147 +150,147 @@
     "https://www.w3schools.com/java/java_ref_math.asp"
   ],
   "Boolean Values": [
-    "boolean isJavaFun = true;boolean isFishTasty = false;System.out.println(isJavaFun);    // Outputs trueSystem.out.println(isFishTasty);  // Outputs false",
+    "boolean isJavaFun = true;\nboolean isFishTasty = false;\nSystem.out.println(isJavaFun);\n    // Outputs trueSystem.out.println(isFishTasty);\n  // Outputs false",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_booleans"
   ],
   "Boolean Expressions": [
-    "int x = 10;int y = 9;System.out.println(x > y); // returns true, because 10 is greater than 9",
+    "int x = 10;\nint y = 9;\nSystem.out.println(x > y);\n // returns true, because 10 is greater than 9",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_booleans1"
   ],
   "Java Conditions if ,else if ,else": "if(){)else if(){}else{}",
   "Short Hand if  else": [
-    "variable = (condition) ? expressionTrue :  expressionFalse;int time = 20;String result = (time < 18) ? \"Good day.\" : \"Good evening.\";System.out.println(result);",
+    "variable = (condition) ? expressionTrue :  expressionFalse;\nint time = 20;\nString result = (time < 18) ? \"Good day.\" : \"Good evening.\";\nSystem.out.println(result);\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_if_ternary"
   ],
   "Java Switch Statements": [
-    "int day = 4;switch (day) {  case 1:    System.out.println(\"Monday\");    break;  case 2:    System.out.println(\"Tuesday\");    break;  case 3:    System.out.println(\"Wednesday\");    break;  case 4:    System.out.println(\"Thursday\");    break;  case 5:    System.out.println(\"Friday\");    break;  case 6:    System.out.println(\"Saturday\");    break;  case 7:    System.out.println(\"Sunday\");    break;}// Outputs \"Thursday\" (day 4)",
+    "int day = 4;\nswitch (day) {\n  case 1:    System.out.println(\"Monday\");\n    break;\n  case 2:    System.out.println(\"Tuesday\");\n    break;\n  case 3:    System.out.println(\"Wednesday\");\n    break;\n  case 4:    System.out.println(\"Thursday\");\n    break;\n  case 5:    System.out.println(\"Friday\");\n    break;\n  case 6:    System.out.println(\"Saturday\");\n    break;\n  case 7:    System.out.println(\"Sunday\");\n    break;\n}\n// Outputs \"Thursday\" (day 4)",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_switch"
   ],
   "The default Keyword": [
-    "int day = 4;switch (day) {  case 6:    System.out.println(\"Today is Saturday\");    break;  case 7:    System.out.println(\"Today is Sunday\");    break;  default:    System.out.println(\"Looking forward to the Weekend\");}// Outputs \"Looking forward to the Weekend\"",
+    "int day = 4;\nswitch (day) {\n  case 6:    System.out.println(\"Today is Saturday\");\n    break;\n  case 7:    System.out.println(\"Today is Sunday\");\n    break;\n  default:    System.out.println(\"Looking forward to the Weekend\");\n}\n// Outputs \"Looking forward to the Weekend\"",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_switch_default"
   ],
   "Loops while , do while , for loop, foreach": "while (condition) {  // code block to be executed}do {  // code block to be executed}while (condition);for (statement 1; statement 2; statement 3) {  // code block to be executed}for (type variableName : arrayName) {  // code block to be executed}String[] cars = {\"Volvo\", \"BMW\", \"Ford\", \"Mazda\"};for (String i : cars) {  System.out.println(i);}",
   "Break and Continue": "break;continue;for (int i = 0; i < 10; i++) {  if (i == 4) {    break;  }  System.out.println(i);}for (int i = 0; i < 10; i++) {  if (i == 4) {    continue;  }  System.out.println(i);}",
   "Break and Continue in While Loop": [
-    "int i = 0;while (i < 10) {  System.out.println(i);  i++;  if (i == 4) {    break;  }}",
+    "int i = 0;\nwhile (i < 10) {\n  System.out.println(i);\n  i++;\n  if (i == 4) {\n    break;\n  }\n}\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_break_while"
   ],
   "Combining Break and Continue": [
-    "for (int i = 0; i < 6; i++) {  if (i == 2) {    continue;  }  if (i == 4) {    break;  }  System.out.println(i);  }",
+    "for (int i = 0;\n i < 6;\n i++) {\n  if (i == 2) {\n    continue;\n  }\n  if (i == 4) {\n    break;\n  }\n  System.out.println(i);\n  }\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_continue_break"
   ],
   "Java Arrays": "String[] cars;String[] cars = {\"Volvo\", \"BMW\", \"Ford\", \"Mazda\"};int[] myNum = {10, 20, 30, 40};",
   "Access the Elements of an Array": [
-    "String[] cars = {\"Volvo\", \"BMW\", \"Ford\", \"Mazda\"};System.out.println(cars[0]);// Outputs Volvo",
+    "String[] cars = {\n\"Volvo\", \"BMW\", \"Ford\", \"Mazda\"}\n;\nSystem.out.println(cars[0]);\n// Outputs Volvo",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_array"
   ],
   "Change an Array Element": [
-    "cars[0] = \"Opel\";String[] cars = {\"Volvo\", \"BMW\", \"Ford\", \"Mazda\"};cars[0] = \"Opel\";System.out.println(cars[0]);// Now outputs Opel instead of Volvo",
+    "cars[0] = \"Opel\";\nString[] cars = {\n\"Volvo\", \"BMW\", \"Ford\", \"Mazda\"}\n;\ncars[0] = \"Opel\";\nSystem.out.println(cars[0]);\n// Now outputs Opel instead of Volvo",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_array_change"
   ],
   "Array Length": [
-    "String[] cars = {\"Volvo\", \"BMW\", \"Ford\", \"Mazda\"};System.out.println(cars.length);// Outputs 4",
+    "String[] cars = {\n\"Volvo\", \"BMW\", \"Ford\", \"Mazda\"}\n;\nSystem.out.println(cars.length);\n// Outputs 4",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_array_length"
   ],
   "Loop Through an Array": [
-    "String[] cars = {\"Volvo\", \"BMW\", \"Ford\", \"Mazda\"};for (int i = 0; i < cars.length; i++) {  System.out.println(cars[i]);}",
+    "String[] cars = {\n\"Volvo\", \"BMW\", \"Ford\", \"Mazda\"}\n;\nfor (int i = 0;\n i < cars.length;\n i++) {\n  System.out.println(cars[i]);\n}\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_array_loop"
   ],
   "Loop Through an Array with For-Each": [
-    "for (type variable : arrayname) {  ...}String[] cars = {\"Volvo\", \"BMW\", \"Ford\", \"Mazda\"};for (String i : cars) {  System.out.println(i);}",
+    "for (type variable : arrayname) {\n  ...}\nString[] cars = {\n\"Volvo\", \"BMW\", \"Ford\", \"Mazda\"}\n;\nfor (String i : cars) {\n  System.out.println(i);\n}\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_array_for_each"
   ],
   "Multidimensional Arrays": "int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };",
   "multi dimensional array Access Elements": [
-    "int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };System.out.println(myNumbers[1][2]); // Outputs 7",
+    "int[][] myNumbers = {\n {\n1, 2, 3, 4}\n, {\n5, 6, 7}\n }\n;\nSystem.out.println(myNumbers[1][2]);\n // Outputs 7",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_array_multi"
   ],
   "multidimesional array Change Element Values": [
-    "int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };myNumbers[1][2] = 9;System.out.println(myNumbers[1][2]); // Outputs 9 instead of 7",
+    "int[][] myNumbers = {\n {\n1, 2, 3, 4}\n, {\n5, 6, 7}\n }\n;\nmyNumbers[1][2] = 9;\nSystem.out.println(myNumbers[1][2]);\n // Outputs 9 instead of 7",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_array_multi_change"
   ],
   "Loop Through a Multi-Dimensional Array": [
-    "int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };for (int i = 0; i < myNumbers.length; ++i) {  for (int j = 0; j < myNumbers[i].length; ++j) {    System.out.println(myNumbers[i][j]);  }}",
+    "int[][] myNumbers = {\n {\n1, 2, 3, 4}\n, {\n5, 6, 7}\n }\n;\nfor (int i = 0;\n i < myNumbers.length;\n ++i) {\n  for (int j = 0;\n j < myNumbers[i].length;\n ++j) {\n    System.out.println(myNumbers[i][j]);\n  }\n}\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_array_multi_for"
   ],
   "Java Methods": "A method is a block of code which only runs when it is called.",
   "Create a Method": "public class Main {  static void myMethod() {    // code to be executed  }}",
   "Call a Method": [
-    "myMethod()public class Main {  static void myMethod() {    System.out.println(\"I just got executed!\");  }  public static void main(String[] args) {    myMethod();  }}// Outputs \"I just got executed!\"",
+    "myMethod()public class Main {\n  static void myMethod() {\n    System.out.println(\"I just got executed!\");\n  }\n  public static void main(String[] args) {\n    myMethod();\n  }\n}\n// Outputs \"I just got executed!\"",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_method"
   ],
   "method Parameters and Arguments": [
-    "public class Main {  static void myMethod(String fname) {    System.out.println(fname + \" Refsnes\");  }  public static void main(String[] args) {    myMethod(\"Liam\");    myMethod(\"Jenny\");    myMethod(\"Anja\");  }}// Liam Refsnes// Jenny Refsnes// Anja Refsnes",
+    "public class Main {\n  static void myMethod(String fname) {\n    System.out.println(fname + \" Refsnes\");\n  }\n  public static void main(String[] args) {\n    myMethod(\"Liam\");\n    myMethod(\"Jenny\");\n    myMethod(\"Anja\");\n  }\n}\n// Liam Refsnes// Jenny Refsnes// Anja Refsnes",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_method_param"
   ],
   "Multiple Parameters": [
-    "public class Main {  static void myMethod(String fname, int age) {    System.out.println(fname + \" is \" + age);  }  public static void main(String[] args) {    myMethod(\"Liam\", 5);    myMethod(\"Jenny\", 8);    myMethod(\"Anja\", 31);  }}// Liam is 5// Jenny is 8// Anja is 31",
+    "public class Main {\n  static void myMethod(String fname, int age) {\n    System.out.println(fname + \" is \" + age);\n  }\n  public static void main(String[] args) {\n    myMethod(\"Liam\", 5);\n    myMethod(\"Jenny\", 8);\n    myMethod(\"Anja\", 31);\n  }\n}\n// Liam is 5// Jenny is 8// Anja is 31",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_method_param2"
   ],
   "Return Values": [
-    "public class Main {  static int myMethod(int x) {    return 5 + x;  }  public static void main(String[] args) {    System.out.println(myMethod(3));  }}// Outputs 8 (5 + 3)",
+    "public class Main {\n  static int myMethod(int x) {\n    return 5 + x;\n  }\n  public static void main(String[] args) {\n    System.out.println(myMethod(3));\n  }\n}\n// Outputs 8 (5 + 3)",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_method_void"
   ],
   "Method Overloading": [
-    "int myMethod(int x)float myMethod(float x)double myMethod(double x, double y)static int plusMethodInt(int x, int y) {  return x + y;}static double plusMethodDouble(double x, double y) {  return x + y;}public static void main(String[] args) {  int myNum1 = plusMethodInt(8, 5);  double myNum2 = plusMethodDouble(4.3, 6.26);  System.out.println(\"int: \" + myNum1);  System.out.println(\"double: \" + myNum2);}",
+    "int myMethod(int x)float myMethod(float x)double myMethod(double x, double y)static int plusMethodInt(int x, int y) {\n  return x + y;\n}\nstatic double plusMethodDouble(double x, double y) {\n  return x + y;\n}\npublic static void main(String[] args) {\n  int myNum1 = plusMethodInt(8, 5);\n  double myNum2 = plusMethodDouble(4.3, 6.26);\n  System.out.println(\"int: \" + myNum1);\n  System.out.println(\"double: \" + myNum2);\n}\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_method_overloading"
   ],
   "Java Scope": "In Java, variables are only accessible inside the region where they are created. This is called scope.",
   "Method Scope": [
-    "public class Main {  public static void main(String[] args) {    // Code here CANNOT use x    int x = 100;    // Code here CAN use x    System.out.println(x);  }}",
+    "public class Main {\n  public static void main(String[] args) {\n    // Code here CANNOT use x    int x = 100;\n    // Code here CAN use x    System.out.println(x);\n  }\n}\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_scope"
   ],
   "Block Scope": [
-    "public class Main {  public static void main(String[] args) {    // Code here CANNOT use x    { // This is a block      // Code here CANNOT use x      int x = 100;      // Code here CAN use x      System.out.println(x);    } // The block ends here    // Code here CANNOT use x  }}",
+    "public class Main {\n  public static void main(String[] args) {\n    // Code here CANNOT use x    {\n // This is a block      // Code here CANNOT use x      int x = 100;\n      // Code here CAN use x      System.out.println(x);\n    }\n // The block ends here    // Code here CANNOT use x  }\n}\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_scope2"
   ],
   "Loop Scope": [
-    "public class Main {  public static void main(String[] args) {    for (int i = 0; i < 5; i++) {      System.out.println(i); // i is accessible here    }    // i is NOT accessible here  }}",
+    "public class Main {\n  public static void main(String[] args) {\n    for (int i = 0;\n i < 5;\n i++) {\n      System.out.println(i);\n // i is accessible here    }\n    // i is NOT accessible here  }\n}\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_scope_loop"
   ],
   "Class Scope": [
-    "public class Main {  int x = 5; // Class variable  public static void main(String[] args) {    Main myObj = new Main();    System.out.println(myObj.x); // Accessible here  }}",
+    "public class Main {\n  int x = 5;\n // Class variable  public static void main(String[] args) {\n    Main myObj = new Main();\n    System.out.println(myObj.x);\n // Accessible here  }\n}\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_scope_class"
   ],
   "Java Recursion": [
-    "public class Main {  public static int sum(int k) {    if (k > 0) {      return k + sum(k - 1);    } else {      return 0;    }  }  public static void main(String[] args) {    int result = sum(10);    System.out.println(result);  }}",
+    "public class Main {\n  public static int sum(int k) {\n    if (k > 0) {\n      return k + sum(k - 1);\n    }\n else {\n      return 0;\n    }\n  }\n  public static void main(String[] args) {\n    int result = sum(10);\n    System.out.println(result);\n  }\n}\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_recursion"
   ],
   "Halting Condition": [
-    "public class Main {  public static int sum(int start, int end) {    if (end > start) {      return end + sum(start, end - 1);    } else {      return end;    }  }  public static void main(String[] args) {    int result = sum(5, 10);    System.out.println(result);  }}",
+    "public class Main {\n  public static int sum(int start, int end) {\n    if (end > start) {\n      return end + sum(start, end - 1);\n    }\n else {\n      return end;\n    }\n  }\n  public static void main(String[] args) {\n    int result = sum(5, 10);\n    System.out.println(result);\n  }\n}\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_recursion2"
   ],
   "Create a Class": "public class Main {  int x = 5;}Remember that the name of the java file should match the class name.",
   "Create an Object": [
-    "public class Main {  int x = 5;  public static void main(String[] args) {    Main myObj = new Main();    System.out.println(myObj.x);  }}",
+    "public class Main {\n  int x = 5;\n  public static void main(String[] args) {\n    Main myObj = new Main();\n    System.out.println(myObj.x);\n  }\n}\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_class"
   ],
   "Multiple Objects": [
-    "public class Main {  int x = 5;  public static void main(String[] args) {    Main myObj1 = new Main();  // Object 1    Main myObj2 = new Main();  // Object 2    myObj2.x = 25;    System.out.println(myObj1.x);  // Outputs 5    System.out.println(myObj2.x);  // Outputs 25  }}",
+    "public class Main {\n  int x = 5;\n  public static void main(String[] args) {\n    Main myObj1 = new Main();\n  // Object 1    Main myObj2 = new Main();\n  // Object 2    myObj2.x = 25;\n    System.out.println(myObj1.x);\n  // Outputs 5    System.out.println(myObj2.x);\n  // Outputs 25  }\n}\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_attributes_multi_obj"
   ],
   "Using Multiple Classes": "Main.javapublic class Main {  int x = 5;}Second.javaclass Second {  public static void main(String[] args) {    Main myObj = new Main();    System.out.println(myObj.x);  }}",
   "Java Class Attributes": "public class Main {  int x = 5;  int y = 3;}",
   "Accessing class Attributes": [
-    "public class Main {  int x = 5;  public static void main(String[] args) {    Main myObj = new Main();    System.out.println(myObj.x);  }}",
+    "public class Main {\n  int x = 5;\n  public static void main(String[] args) {\n    Main myObj = new Main();\n    System.out.println(myObj.x);\n  }\n}\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_attributes"
   ],
   "Modify Attributes": [
-    "public class Main {  int x;  public static void main(String[] args) {    Main myObj = new Main();    myObj.x = 40;    System.out.println(myObj.x);  }}",
+    "public class Main {\n  int x;\n  public static void main(String[] args) {\n    Main myObj = new Main();\n    myObj.x = 40;\n    System.out.println(myObj.x);\n  }\n}\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_attributes2"
   ],
   "Multiple Attributes": [
-    "public class Main {  String fname = \"John\";  String lname = \"Doe\";  int age = 24;  public static void main(String[] args) {    Main myObj = new Main();    System.out.println(\"Name: \" + myObj.fname + \" \" + myObj.lname);    System.out.println(\"Age: \" + myObj.age);  }}",
+    "public class Main {\n  String fname = \"John\";\n  String lname = \"Doe\";\n  int age = 24;\n  public static void main(String[] args) {\n    Main myObj = new Main();\n    System.out.println(\"Name: \" + myObj.fname + \" \" + myObj.lname);\n    System.out.println(\"Age: \" + myObj.age);\n  }\n}\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_attributes_multiple"
   ],
   "Java Class Methods": "public class Main {  static void myMethod() {    System.out.println(\"Hello World!\");  }}",
   "Static vs. Public": [
-    "static method, which means that it can be accessed without creating an object of the class, unlike public, which can only be accessed by objects:public class Main {  // Static method  static void myStaticMethod() {    System.out.println(\"Static methods can be called without creating objects\");  }  // Public method  public void myPublicMethod() {    System.out.println(\"Public methods must be called by creating objects\");  }  // Main method  public static void main(String[] args) {    myStaticMethod(); // Call the static method    // myPublicMethod(); This would compile an error    Main myObj = new Main(); // Create an object of Main    myObj.myPublicMethod(); // Call the public method on the object  }}",
+    "static method, which means that it can be accessed without creating an object of the class, unlike public, which can only be accessed by objects:public class Main {\n  // Static method  static void myStaticMethod() {\n    System.out.println(\"Static methods can be called without creating objects\");\n  }\n  // Public method  public void myPublicMethod() {\n    System.out.println(\"Public methods must be called by creating objects\");\n  }\n  // Main method  public static void main(String[] args) {\n    myStaticMethod();\n // Call the static method    // myPublicMethod();\n This would compile an error    Main myObj = new Main();\n // Create an object of Main    myObj.myPublicMethod();\n // Call the public method on the object  }\n}\n",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_class_method_static"
   ],
   "Access Methods With an Object": [
-    "// Create a Main classpublic class Main {   // Create a fullThrottle() method  public void fullThrottle() {    System.out.println(\"The car is going as fast as it can!\");  }  // Create a speed() method and add a parameter  public void speed(int maxSpeed) {    System.out.println(\"Max speed is: \" + maxSpeed);  }  // Inside main, call the methods on the myCar object  public static void main(String[] args) {    Main myCar = new Main();   // Create a myCar object    myCar.fullThrottle();      // Call the fullThrottle() method    myCar.speed(200);          // Call the speed() method  }}// The car is going as fast as it can!// Max speed is: 200",
+    "// Create a Main classpublic class Main {\n   // Create a fullThrottle() method  public void fullThrottle() {\n    System.out.println(\"The car is going as fast as it can!\");\n  }\n  // Create a speed() method and add a parameter  public void speed(int maxSpeed) {\n    System.out.println(\"Max speed is: \" + maxSpeed);\n  }\n  // Inside main, call the methods on the myCar object  public static void main(String[] args) {\n    Main myCar = new Main();\n   // Create a myCar object    myCar.fullThrottle();\n      // Call the fullThrottle() method    myCar.speed(200);\n          // Call the speed() method  }\n}\n// The car is going as fast as it can!// Max speed is: 200",
     "https://www.w3schools.com/java/tryjava.asp?filename=demo_class_car"
   ]
 }
