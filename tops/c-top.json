@@ -1,6 +1,6 @@
 {
-  "syntax": [
-    "#include <stdio.h>\n\n  int main(){\n     printf(\"hi\");\n     return 0;\n}",
+  "C syntax": [
+    "#include <stdio.h>  int main(){     printf(\"hi\");     return 0;}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_helloworld"
   ],
   "single statements": [
@@ -8,271 +8,211 @@
     "https://www.w3schools.com/c/tryc.php?filename=demo_statements"
   ],
   "multiple statements": [
-    "printf(\"Hello World!\");\nprintf(\"Have a good day!\");\nreturn 0;",
+    "printf(\"Hello World!\");printf(\"Have a good day!\");return 0;",
     "https://www.w3schools.com/c/tryc.php?filename=demo_statements2"
   ],
-  "output": [
-    "#include <stdio.h>\n\nint main() {\n  printf(\"Hello World!\");\n  return 0;\n}",
+  "output / print text": [
+    "#include <stdio.h>int main() {  printf(\"Hello World!\");  return 0;}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_output"
   ],
   "double quotes": [
-    "printf(\"This sentence will work!\"); // correct\nprintf(This sentence will work); // wrong",
+    "printf(\"This sentence will work!\"); // correctprintf(This sentence will work); // wrong",
     "https://www.w3schools.com/c/tryc.php?filename=demo_output_quotes_err"
   ],
   "printf function": [
-    "printf(\"Hello World!\");\n  printf(\"I am learning C.\");\n  printf(\"And it is awesome!\");",
+    "printf(\"Hello World!\");  printf(\"I am learning C.\");  printf(\"And it is awesome!\");",
     "https://www.w3schools.com/c/tryc.php?filename=demo_output2"
   ],
   "new lines": [
-    "printf(\"Hello World!\\n\");\nprintf(\"I am learning C.\");",
+    "printf(\"Hello World!\\n\");printf(\"I am learning C.\");",
     "https://www.w3schools.com/c/tryc.php?filename=demo_newline"
   ],
   "escape sequence": [
-    "printf(\"Hello World!\\n\\n \\t \\\\\");\n  printf(\"I am learning C.\");",
+    "printf(\"Hello World!\\n\\n \\t \\\\\");  printf(\"I am learning C.\");",
     "https://www.w3schools.com/c/tryc.php?filename=demo_esc_char"
   ],
   "comments single and multiple": [
-    "// thus is single \n\n/* multi\n   ple\n   line \n   comment\n*/",
+    "// thus is single /* multi   ple   line    comment*/",
     "https://www.w3schools.com/c/tryc.php?filename=demo_comments_multi"
   ],
-  "variable": [
-    "a\nb\nc\nd",
-    ""
-  ],
-  "declaring variable": [
-    "type variableNmae = value; //syntax\n\nint x= 10;",
-    ""
-  ],
-  "output variable": [
-    "int myNum = 15;\n\nprintf(myNum); // wrong\n\nprintf(\"%d\",myNum); //correct",
+  "variable": "abcd",
+  "declaring variable": "type variableNmae = value; //syntaxint x= 10;",
+  "display variable": [
+    "int myNum = 15;printf(myNum); // wrongprintf(\"%d\",myNum); //correct",
     "https://www.w3schools.com/c/tryc.php?filename=demo_variables_printf_err"
   ],
   "format specifiers": [
-    "%d    %f  %lf  %c  %s\n\nint myNum = 15;            // Integer (whole number)\n\nfloat myFloatNum = 5.99;   // Floating point number\n\nchar myLetter = 'D';       // Character\n\n\nprintf(\"%d\\n\", myNum);\n\nprintf(\"%f\\n\", myFloatNum);\n\nprintf(\"%c\\n\", myLetter);",
+    "%d    %f  %lf  %c  %sint myNum = 15;            // Integer (whole number)float myFloatNum = 5.99;   // Floating point numberchar myLetter = 'D';       // Characterprintf(\"%d\\n\", myNum);printf(\"%f\\n\", myFloatNum);printf(\"%c\\n\", myLetter);",
     "https://www.w3schools.com/c/tryc.php?filename=demo_variables_data_types"
   ],
   "Change Variable Values": [
-    "int myNum = 15;  // myNum is 15\n\nmyNum = 10;  // Now myNum is 10",
+    "int myNum = 15;  // myNum is 15myNum = 10;  // Now myNum is 10",
     "https://www.w3schools.com/c/tryc.php?filename=demo_variables_change"
   ],
   "Add Variables Together": [
-    "int x = 5;\nint y = 6;\nint sum = x + y;\nprintf(\"%d\", sum);",
+    "int x = 5;int y = 6;int sum = x + y;printf(\"%d\", sum);",
     "https://www.w3schools.com/c/tryc.php?filename=demo_variables_add"
   ],
-  "Declare Multiple Variables": [
-    "int x = 5, y = 6, z = 50;\nprintf(\"%d\", x + y + z);\n\nint x, y, z;\nx = y = z = 50;\nprintf(\"%d\", x + y + z);",
+  "Declare many Variables": [
+    "int x = 5, y = 6, z = 50;printf(\"%d\", x + y + z);int x, y, z;x = y = z = 50;printf(\"%d\", x + y + z);",
     "https://www.w3schools.com/c/tryc.php?filename=demo_variables_multiple"
   ],
-  "C Variable Names": [
-    "_ug\n\neeggfyweg\n\nHGHF",
-    ""
-  ],
+  "C Variable Names": "_ugeeggfywegHGHF",
   "Data Types": [
-    "int studentID = 15;\nint studentAge = 23;\nfloat studentFee = 75.25;\nchar studentGrade = 'B';\n\n\nprintf(\"Student id: %d\\n\", studentID);\nprintf(\"Student age: %d\\n\", studentAge);\nprintf(\"Student fee: %f\\n\", studentFee);\nprintf(\"Student grade: %c\", studentGrade);",
+    "int studentID = 15;int studentAge = 23;float studentFee = 75.25;char studentGrade = 'B';printf(\"Student id: %d\\n\", studentID);printf(\"Student age: %d\\n\", studentAge);printf(\"Student fee: %f\\n\", studentFee);printf(\"Student grade: %c\", studentGrade);",
     "https://www.w3schools.com/c/tryc.php?filename=demo_variables_reallife"
   ],
-  "Basic Data Types": [
-    "int float double char",
-    ""
-  ],
-  "Basic Format Specifiers": [
-    "%d or %i ----- int\t\n%f or %F ----- float\t\n%lf ---- double\t\n%c ---- char\t\n%s ------ string",
-    ""
-  ],
+  "Basic Data Types": "int float double char",
+  "Basic Format Specifiers": "%d or %i ----- int\t%f or %F ----- float\t%lf ---- double\t%c ---- char\t%s ------ string",
   "The char Type": [
-    "char myGrade = 'A';\nprintf(\"%c\", myGrade);\n\nchar a = 65, b = 66, c = 67;\nprintf(\"%c\", a);\nprintf(\"%c\", b);\nprintf(\"%c\", c);",
+    "char myGrade = 'A';printf(\"%c\", myGrade);char a = 65, b = 66, c = 67;printf(\"%c\", a);printf(\"%c\", b);printf(\"%c\", c);",
     "https://www.w3schools.com/c/tryc.php?filename=demo_data_types_characters"
   ],
-  "Numeric Types": [
-    "int myNum = 1000;\nprintf(\"%d\", myNum);\n\nfloat myNum = 5.75;\nprintf(\"%f\", myNum);\n\ndouble myNum = 19.99;\nprintf(\"%lf\", myNum);",
-    ""
-  ],
+  "Numeric Types": "int myNum = 1000;printf(\"%d\", myNum);float myNum = 5.75;printf(\"%f\", myNum);double myNum = 19.99;printf(\"%lf\", myNum);",
   "Scientific Numbers": [
-    "float f1 = 35e3;   // 35 * 10^3 = 35000\ndouble d1 = 12E4;  // 12 * 10^4 = 120000\n\nprintf(\"%f\\n\", f1);\nprintf(\"%lf\", d1);",
+    "float f1 = 35e3;   // 35 * 10^3 = 35000double d1 = 12E4;  // 12 * 10^4 = 120000printf(\"%f\\n\", f1);printf(\"%lf\", d1);",
     "https://www.w3schools.com/c/tryc.php?filename=demo_data_types_scientific"
   ],
   "Set Decimal Precision": [
-    "float myFloatNum = 3.5;\ndouble myDoubleNum = 19.99;\n\nprintf(\"%f\\n\", myFloatNum); // Outputs 3.500000\nprintf(\"%lf\", myDoubleNum); // Outputs 19.990000\n\n\n\nfloat myFloatNum = 3.5;\n\nprintf(\"%f\\n\", myFloatNum);   // Default will show 6 digits after the decimal point\nprintf(\"%.1f\\n\", myFloatNum); // Only show 1 digit\nprintf(\"%.2f\\n\", myFloatNum); // Only show 2 digits\nprintf(\"%.4f\", myFloatNum);   // Only show 4 digits",
+    "float myFloatNum = 3.5;double myDoubleNum = 19.99;printf(\"%f\\n\", myFloatNum); // Outputs 3.500000printf(\"%lf\", myDoubleNum); // Outputs 19.990000float myFloatNum = 3.5;printf(\"%f\\n\", myFloatNum);   // Default will show 6 digits after the decimal pointprintf(\"%.1f\\n\", myFloatNum); // Only show 1 digitprintf(\"%.2f\\n\", myFloatNum); // Only show 2 digitsprintf(\"%.4f\", myFloatNum);   // Only show 4 digits",
     "https://www.w3schools.com/c/tryc.php?filename=demo_decimal_precision2"
   ],
   "Get the Memory Size": [
-    "int\t2 or 4 bytes\nfloat\t4 bytes\ndouble\t8 bytes\nchar\t1 byte\n\n\nint myInt;\nfloat myFloat;\ndouble myDouble;\nchar myChar;\n\nprintf(\"%zu\\n\", sizeof(myInt));\nprintf(\"%zu\\n\", sizeof(myFloat));\nprintf(\"%zu\\n\", sizeof(myDouble));\nprintf(\"%zu\\n\", sizeof(myChar));",
+    "int\t2 or 4 bytesfloat\t4 bytesdouble\t8 byteschar\t1 byteint myInt;float myFloat;double myDouble;char myChar;printf(\"%zu\\n\", sizeof(myInt));printf(\"%zu\\n\", sizeof(myFloat));printf(\"%zu\\n\", sizeof(myDouble));printf(\"%zu\\n\", sizeof(myChar));",
     "https://www.w3schools.com/c/tryc.php?filename=demo_sizeof"
   ],
-  "Type Conversion": [
-    "int x = 5;\nint y = 2;\nint sum = 5 / 2;\n\nprintf(\"%d\", sum); // Outputs 2",
+  "Type Casting": [
+    "int x = 5;int y = 2;int sum = 5 / 2;printf(\"%d\", sum); // Outputs 2",
     "https://www.w3schools.com/c/tryc.php?filename=demo_type_conversion"
   ],
   "Implicit Conversion": [
-    "// Automatic conversion: int to float\nfloat myFloat = 9;\n\nprintf(\"%f\", myFloat); // 9.000000",
+    "// Automatic conversion: int to floatfloat myFloat = 9;printf(\"%f\", myFloat); // 9.000000",
     "https://www.w3schools.com/c/tryc.php?filename=demo_type_conversion_auto"
   ],
   "Explicit Conversion": [
-    "float sum = (float) 5 / 2;\n\nprintf(\"%f\", sum); // 2.500000",
+    "float sum = (float) 5 / 2;printf(\"%f\", sum); // 2.500000",
     "https://www.w3schools.com/c/tryc.php?filename=demo_type_conversion_man"
   ],
   "Constants": [
-    "const int minutesPerHour;\n\nminutesPerHour = 60; // cant update",
+    "const int minutesPerHour;minutesPerHour = 60; // cant update",
     "https://www.w3schools.com/c/tryc.php?filename=demo_constants3"
   ],
   "Operators": [
-    "int sum1 = 100 + 50;        // 150 (100 + 50)\nint sum2 = sum1 + 250;      // 400 (150 + 250)\nint sum3 = sum2 + sum2;     // 800 (400 + 400)",
+    "int sum1 = 100 + 50;        // 150 (100 + 50)int sum2 = sum1 + 250;      // 400 (150 + 250)int sum3 = sum2 + sum2;     // 800 (400 + 400)",
     "https://www.w3schools.com/c/tryc.php?filename=demo_oper2"
   ],
-  "Arithmetic Operators": [
-    "+\tAddition\tx + y\t\n-\tSubtraction\tx - y\t\n*\tMultiplication\tx * y\t\n/\tDivision\tx / y\t\n%\tModulus\tReturns\tx % y\t\n++\tIncrement 1 \t++x\t\n--\tDecrement 1     --x",
-    ""
-  ],
-  "Assignment Operators": [
-    "=\tx = 5\tx = 5\t\n+=\tx += 3\tx = x + 3\t\n-=\tx -= 3\tx = x - 3\t\n*=\tx *= 3\tx = x * 3\t\n/=\tx /= 3\tx = x / 3\t\n%=\tx %= 3\tx = x % 3\t\n&=\tx &= 3\tx = x & 3\t\n|=\tx |= 3\tx = x | 3\t\n^=\tx ^= 3\tx = x ^ 3\t\n>>=\tx >>= 3\tx = x >> 3\t\n<<=\tx <<= 3\tx = x << 3",
-    ""
-  ],
-  "Comparison Operators": [
-    "==\tEqual to\tx == y\t\n!=\tNot equal\tx != y\t\n>\tGreater than\tx > y\t\n<\tLess than\tx < y\n>=\tGreater than or equal to\tx >= y\n<=\tLess than or equal to\tx <= y",
-    ""
-  ],
-  "Logical Operators": [
-    "&& \tAND\tx < 5 &&  x < 10\n|| \tOR\tx < 5 || x < 4\t\n!\tNOT\t!(x < 5 && x < 10)",
-    ""
-  ],
-  "Booleans": [
-    "YES / NO\nON / OFF\nTRUE / FALSE\n1 / 0",
-    ""
-  ],
-  "Boolean Variables": [
-    "#include <stdbool.h>\n\n\nbool isProgrammingFun = true;\nbool isFishTasty = false;\n\n\nprintf(\"%d\", isProgrammingFun);   // Returns 1 (true)\nprintf(\"%d\", isFishTasty);        // Returns 0 (false)",
+  "Arithmetic Operators": "+\tAddition\tx + y\t-\tSubtraction\tx - y\t*\tMultiplication\tx * y\t/\tDivision\tx / y\t%\tModulus\tReturns\tx % y\t++\tIncrement 1 \t++x\t--\tDecrement 1     --x",
+  "Assignment Operators": "=\tx = 5\tx = 5\t+=\tx += 3\tx = x + 3\t-=\tx -= 3\tx = x - 3\t*=\tx *= 3\tx = x * 3\t/=\tx /= 3\tx = x / 3\t%=\tx %= 3\tx = x % 3\t&=\tx &= 3\tx = x & 3\t|=\tx |= 3\tx = x | 3\t^=\tx ^= 3\tx = x ^ 3\t>>=\tx >>= 3\tx = x >> 3\t<<=\tx <<= 3\tx = x << 3",
+  "Comparison Operators": "==\tEqual to\tx == y\t!=\tNot equal\tx != y\t>\tGreater than\tx > y\t<\tLess than\tx < y>=\tGreater than or equal to\tx >= y<=\tLess than or equal to\tx <= y",
+  "Logical Operators": "&& \tAND\tx < 5 &&  x < 10|| \tOR\tx < 5 || x < 4\t!\tNOT\t!(x < 5 && x < 10)",
+  "Booleans values": "YES / NOON / OFFTRUE / FALSE1 / 0",
+  "Boolean Variables/ expressions": [
+    "#include <stdbool.h>bool isProgrammingFun = true;bool isFishTasty = false;printf(\"%d\", isProgrammingFun);   // Returns 1 (true)printf(\"%d\", isFishTasty);        // Returns 0 (false)",
     "https://www.w3schools.com/c/tryc.php?filename=demo_boolean"
   ],
   "Comparing Values and Variables": [
-    "int x = 10;\nint y = 9;\nprintf(\"%d\", x > y);",
+    "int x = 10;int y = 9;printf(\"%d\", x > y);",
     "https://www.w3schools.com/c/tryc.php?filename=demo_boolean3"
   ],
   "Conditions if, else if, else": [
-    "if (20 > 18) {\n\n  //someghdj\n\n}else if(8>7){\n\n//jfhwdhfewhf\n\n}else{\n\n// sjhbfbwjhdhbf\n\n}\n\n\n\nshort if condition syntac\n\nvariable = (condition) ? expressionTrue : expressionFalse;",
+    "if (20 > 18) {  //someghdj}else if(8>7){//jfhwdhfewhf}else{// sjhbfbwjhdhbf}short if condition syntacvariable = (condition) ? expressionTrue : expressionFalse;",
     "https://www.w3schools.com/c/tryc.php?filename=demo_if_else_if"
   ],
   "switch": [
-    "int day = 4;\n\nswitch (day) {\n  case 1:\n    printf(\"Monday\");\n    break;\n  case 2:\n    printf(\"Tuesday\");\n    break;\n  case 3:\n    printf(\"Wednesday\");\n    break;\n  case 4:\n    printf(\"Thursday\");\n    break;\n  case 5:\n    printf(\"Friday\");\n    break;\n  case 6:\n    printf(\"Saturday\");\n    break;\n  case 7:\n    printf(\"Sunday\");\n    break;\n}\n\n// Outputs \"Thursday\" (day 4)",
+    "int day = 4;switch (day) {  case 1:    printf(\"Monday\");    break;  case 2:    printf(\"Tuesday\");    break;  case 3:    printf(\"Wednesday\");    break;  case 4:    printf(\"Thursday\");    break;  case 5:    printf(\"Friday\");    break;  case 6:    printf(\"Saturday\");    break;  case 7:    printf(\"Sunday\");    break;}// Outputs \"Thursday\" (day 4)",
     "https://www.w3schools.com/c/tryc.php?filename=demo_switch"
   ],
-  "loops for, while, do-while": [
-    "while (condition) {\n  // code block to be executed\n}\n\n\ndo {\n  // code block to be executed\n}\nwhile (condition);\n\n\nfor (expression 1; expression 2; expression 3) {\n  // code block to be executed\n}",
-    ""
-  ],
+  "loops for, while, do-while": "while (condition) {  // code block to be executed}do {  // code block to be executed}while (condition);for (expression 1; expression 2; expression 3) {  // code block to be executed}",
   "break": [
-    "int i;\n\nfor (i = 0; i < 10; i++) {\n  if (i == 4) {\n    break;\n  }\n  printf(\"%d\\n\", i);\n}",
+    "int i;for (i = 0; i < 10; i++) {  if (i == 4) {    break;  }  printf(\"%d\\n\", i);}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_break"
   ],
   "continue": [
-    "int i;\n\nfor (i = 0; i < 10; i++) {\n  if (i == 4) {\n    continue;\n  }\n  printf(\"%d\\n\", i);\n}",
+    "int i;for (i = 0; i < 10; i++) {  if (i == 4) {    continue;  }  printf(\"%d\\n\", i);}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_continue"
   ],
   "Break and Continue in While Loop": [
-    "break example \n\nint i = 0;\n\nwhile (i < 10) {\n  if (i == 4) {\n    break;\n  }\n  printf(\"%d\\n\", i);\n  i++;\n}\n\n\n\n\n\nContinue Example\nint i = 0;\n\nwhile (i < 10) {\n  if (i == 4) {\n    i++;\n    continue;\n  }\n  printf(\"%d\\n\", i);\n  i++;\n}",
+    "break example int i = 0;while (i < 10) {  if (i == 4) {    break;  }  printf(\"%d\\n\", i);  i++;}Continue Exampleint i = 0;while (i < 10) {  if (i == 4) {    i++;    continue;  }  printf(\"%d\\n\", i);  i++;}",
     "https://www.w3schools.com/c/c_break_continue.php"
   ],
-  "Arrays": [
-    "int myNumbers[] = {25, 50, 75, 100};",
-    ""
-  ],
+  "Arrays": "int myNumbers[] = {25, 50, 75, 100};",
   "Access the Elements of an Array": [
-    "int myNumbers[] = {25, 50, 75, 100};\nprintf(\"%d\", myNumbers[0]);\n\n// Outputs 25",
+    "int myNumbers[] = {25, 50, 75, 100};printf(\"%d\", myNumbers[0]);// Outputs 25",
     "https://www.w3schools.com/c/tryc.php?filename=demo_array"
   ],
   "Change an Array Element": [
-    "int myNumbers[] = {25, 50, 75, 100};\nmyNumbers[0] = 33;\n\nprintf(\"%d\", myNumbers[0]);\n\n// Now outputs 33 instead of 25",
+    "int myNumbers[] = {25, 50, 75, 100};myNumbers[0] = 33;printf(\"%d\", myNumbers[0]);// Now outputs 33 instead of 25",
     "https://www.w3schools.com/c/tryc.php?filename=demo_array_change"
   ],
   "Loop Through an Array": [
-    "int myNumbers[] = {25, 50, 75, 100};\nint i;\n\nfor (i = 0; i < 4; i++) {\n  printf(\"%d\\n\", myNumbers[i]);\n}",
+    "int myNumbers[] = {25, 50, 75, 100};int i;for (i = 0; i < 4; i++) {  printf(\"%d\\n\", myNumbers[i]);}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_array_loop"
   ],
   "Set Array Size": [
-    "// Declare an array of four integers:\nint myNumbers[4];\n\n// Add elements\nmyNumbers[0] = 25;\nmyNumbers[1] = 50;\nmyNumbers[2] = 75;\nmyNumbers[3] = 100;",
+    "// Declare an array of four integers:int myNumbers[4];// Add elementsmyNumbers[0] = 25;myNumbers[1] = 50;myNumbers[2] = 75;myNumbers[3] = 100;",
     "https://www.w3schools.com/c/tryc.php?filename=demo_array_set_size"
   ],
-  "Avoid Mixing Data Types": [
-    "int myArray[] = {25, 50, 75, 3.15, 5.99}; //error",
-    ""
-  ],
+  "Avoid Mixing Data Types": "int myArray[] = {25, 50, 75, 3.15, 5.99}; //error",
   "Get Array Size or Length": [
-    "int myNumbers[] = {10, 25, 50, 75, 100};\nprintf(\"%zu\", sizeof(myNumbers)); // Prints 20",
+    "int myNumbers[] = {10, 25, 50, 75, 100};printf(\"%zu\", sizeof(myNumbers)); // Prints 20",
     "https://www.w3schools.com/c/tryc.php?filename=demo_array_get_size"
   ],
   "Making Better Loops": [
-    "int myNumbers[] = {25, 50, 75, 100};\nint length = sizeof(myNumbers) / sizeof(myNumbers[0]);\nint i;\n\nfor (i = 0; i < length; i++) {\n  printf(\"%d\\n\", myNumbers[i]);\n}",
+    "int myNumbers[] = {25, 50, 75, 100};int length = sizeof(myNumbers) / sizeof(myNumbers[0]);int i;for (i = 0; i < length; i++) {  printf(\"%d\\n\", myNumbers[i]);}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_array_loop_length"
   ],
-  "Multidimensional Arrays": [
-    "1D 2D 3D....",
-    ""
-  ],
-  "Two-Dimensional Arrays": [
-    "int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} };",
-    ""
-  ],
+  "Multidimensional Arrays": "1D 2D 3D....",
+  "Two- Dimensional Arrays": "int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} };",
   "Access the Elements of a 2D Array": [
-    "int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} };\n\nprintf(\"%d\", matrix[0][2]);  // Outputs 2",
+    "int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} };printf(\"%d\", matrix[0][2]);  // Outputs 2",
     "https://www.w3schools.com/c/tryc.php?filename=demo_array_multi_access"
   ],
   "Change Elements in a 2D Array": [
-    "int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} };\nmatrix[0][0] = 9;\n\nprintf(\"%d\", matrix[0][0]);  // Now outputs 9 instead of 1",
+    "int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} };matrix[0][0] = 9;printf(\"%d\", matrix[0][0]);  // Now outputs 9 instead of 1",
     "https://www.w3schools.com/c/tryc.php?filename=demo_array_multi_change"
   ],
   "Loop Through a 2D Array": [
-    "int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} };\n\nint i, j;\nfor (i = 0; i < 2; i++) {\n  for (j = 0; j < 3; j++) {\n    printf(\"%d\\n\", matrix[i][j]);\n  }\n}",
+    "int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} };int i, j;for (i = 0; i < 2; i++) {  for (j = 0; j < 3; j++) {    printf(\"%d\\n\", matrix[i][j]);  }}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_array_multi_loop"
   ],
   "Three-Dimensional Arrays": [
     "int example[2][4][3];",
     "https://www.w3schools.com/c/tryc.php?filename=demo_array_multi_3d"
   ],
-  "Strings": [
-    "char greetings[] = \"Hello World!\";",
-    ""
-  ],
+  "Strings": "char greetings[] = \"Hello World!\";",
   "Access Strings": [
-    "char greetings[] = \"Hello World!\";\nprintf(\"%c\", greetings[0]);",
+    "char greetings[] = \"Hello World!\";printf(\"%c\", greetings[0]);",
     "https://www.w3schools.com/c/tryc.php?filename=demo_strings_access"
   ],
   "Modify Strings": [
-    "char greetings[] = \"Hello World!\";\ngreetings[0] = 'J';\nprintf(\"%s\", greetings);\n// Outputs Jello World! instead of Hello World!",
+    "char greetings[] = \"Hello World!\";greetings[0] = 'J';printf(\"%s\", greetings);// Outputs Jello World! instead of Hello World!",
     "https://www.w3schools.com/c/tryc.php?filename=demo_strings_modify"
   ],
   "Loop Through a String": [
-    "char carName[] = \"Volvo\";\nint i;\n\nfor (i = 0; i < 5; ++i) {\n  printf(\"%c\\n\", carName[i]);\n}",
+    "char carName[] = \"Volvo\";int i;for (i = 0; i < 5; ++i) {  printf(\"%c\\n\", carName[i]);}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_strings_loop"
   ],
-  "Another Way Of Creating Strings": [
-    "char greetings[] = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!', '\\0'};\nprintf(\"%s\", greetings);",
-    ""
-  ],
-  "Differences": [
-    "char greetings[] = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!', '\\0'};\nchar greetings2[] = \"Hello World!\";\n\nprintf(\"%zu\\n\", sizeof(greetings));   // Outputs 13\nprintf(\"%zu\\n\", sizeof(greetings2));  // Outputs 13",
-    ""
-  ],
+  "Another Way Of Creating Strings": "char greetings[] = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!', '\\0'};printf(\"%s\", greetings);",
+  "Differences": "char greetings[] = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!', '\\0'};char greetings2[] = \"Hello World!\";printf(\"%zu\\n\", sizeof(greetings));   // Outputs 13printf(\"%zu\\n\", sizeof(greetings2));  // Outputs 13",
   "Strings - Special Characters": [
-    "Escape character\tResult\t  Description\n\\'                        '\t   Single quote\n\\\"\t                  \"\t   Double quote\n\\\\\t                  \\    \t   Backslash",
+    "Escape character\tResult\t  Description\\'                        '\t   Single quote\\\"\t                  \"\t   Double quote\\\\\t                  \\    \t   Backslash",
     "https://www.w3schools.com/c/tryc.php?filename=demo_strings_esc1"
   ],
-  "String Functions": [
-    "#include <string.h>\n\nlike length,copy,concat,compare",
-    ""
-  ],
+  "String Functions": "#include <string.h>like length,copy,concat,compare",
   "String Length": [
-    "strlen();\n\nchar alphabet[] = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\";\nprintf(\"%zu\", strlen(alphabet));",
+    "strlen();char alphabet[] = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\";printf(\"%zu\", strlen(alphabet));",
     "https://www.w3schools.com/c/tryc.php?filename=demo_strings_length"
   ],
-  "Concatenate Strings": [
-    "char str1[20] = \"Hello \";\nchar str2[] = \"World!\";\n\n// Concatenate str2 to str1 (result is stored in str1)\nstrcat(str1, str2);\n\n// Print str1\nprintf(\"%s\", str1);",
+  "String Concatenation": [
+    "char str1[20] = \"Hello \";char str2[] = \"World!\";// Concatenate str2 to str1 (result is stored in str1)strcat(str1, str2);// Print str1printf(\"%s\", str1);",
     "https://www.w3schools.com/c/tryc.php?filename=demo_strings_strcat"
   ],
   "Copy Strings": [
-    "char str1[20] = \"Hello World!\";\nchar str2[20];\n\n// Copy str1 to str2\nstrcpy(str2, str1);\n\n// Print str2\nprintf(\"%s\", str2);",
+    "char str1[20] = \"Hello World!\";char str2[20];// Copy str1 to str2strcpy(str2, str1);// Print str2printf(\"%s\", str2);",
     "https://www.w3schools.com/c/tryc.php?filename=demo_strings_strcpy"
   ],
   "Compare Strings": [
-    "char str1[] = \"Hello\";\nchar str2[] = \"Hello\";\nchar str3[] = \"Hi\";\n\n// Compare str1 and str2, and print the result\nprintf(\"%d\\n\", strcmp(str1, str2));  // Returns 0 (the strings are equal)\n\n// Compare str1 and str3, and print the result\nprintf(\"%d\\n\", strcmp(str1, str3));  // Returns -4 (the strings are not equal)",
+    "char str1[] = \"Hello\";char str2[] = \"Hello\";char str3[] = \"Hi\";// Compare str1 and str2, and print the resultprintf(\"%d\\n\", strcmp(str1, str2));  // Returns 0 (the strings are equal)// Compare str1 and str3, and print the resultprintf(\"%d\\n\", strcmp(str1, str3));  // Returns -4 (the strings are not equal)",
     "https://www.w3schools.com/c/tryc.php?filename=demo_strings_strcmp"
   ],
   "Complete String Reference": [
@@ -280,111 +220,96 @@
     "https://www.w3schools.com/c/c_ref_string.php"
   ],
   "User Input": [
-    "int myNum;\n\n// Ask the user to type a number\nprintf(\"Type a number: \\n\");\n\n// Get and save the number the user types\nscanf(\"%d\", &myNum);\n\n// Output the number the user typed\nprintf(\"Your number is: %d\", myNum);",
+    "int myNum;// Ask the user to type a numberprintf(\"Type a number: \\n\");// Get and save the number the user typesscanf(\"%d\", &myNum);// Output the number the user typedprintf(\"Your number is: %d\", myNum);",
     "https://www.w3schools.com/cpp/showcpp.asp?filename=demo_user_input_c"
   ],
   "Multiple Inputs": [
-    "int myNum;\nchar myChar;\n\n// Ask the user to type a number AND a character\nprintf(\"Type a number AND a character and press enter: \\n\");\n\n// Get and save the number AND character the user types\nscanf(\"%d %c\", &myNum, &myChar);\n\n// Print the number\nprintf(\"Your number is: %d\\n\", myNum);\n\n// Print the character\nprintf(\"Your character is: %c\\n\", myChar);",
+    "int myNum;char myChar;// Ask the user to type a number AND a characterprintf(\"Type a number AND a character and press enter: \\n\");// Get and save the number AND character the user typesscanf(\"%d %c\", &myNum, &myChar);// Print the numberprintf(\"Your number is: %d\\n\", myNum);// Print the characterprintf(\"Your character is: %c\\n\", myChar);",
     "https://www.w3schools.com/cpp/showcpp.asp?filename=demo_user_input_c_multi"
   ],
   "Take String Input": [
-    "char firstName[30];\n\n// Ask the user to input some text\nprintf(\"Enter your first name: \\n\");\n\n// Get and save the text\nscanf(\"%s\", firstName);\n\n// Output the text\nprintf(\"Hello %s\", firstName);",
+    "char firstName[30];// Ask the user to input some textprintf(\"Enter your first name: \\n\");// Get and save the textscanf(\"%s\", firstName);// Output the textprintf(\"Hello %s\", firstName);",
     "https://www.w3schools.com/cpp/showcpp.asp?filename=demo_user_input_str_c"
   ],
   "Memory Address": [
-    "int myAge = 43;\nprintf(\"%p\", &myAge); // Outputs 0x7ffe5367e044",
+    "int myAge = 43;printf(\"%p\", &myAge); // Outputs 0x7ffe5367e044",
     "https://www.w3schools.com/c/tryc.php?filename=demo_memory_adr"
   ],
   "Creating Pointers": [
-    "int myAge = 43; // an int variable\n\nprintf(\"%d\", myAge);  // Outputs the value of myAge (43)\nprintf(\"%p\", &myAge); // Outputs the memory address of myAge (0x7ffe5367e044)",
+    "int myAge = 43; // an int variableprintf(\"%d\", myAge);  // Outputs the value of myAge (43)printf(\"%p\", &myAge); // Outputs the memory address of myAge (0x7ffe5367e044)",
     "https://www.w3schools.com/c/tryc.php?filename=demo_pointers_memadr"
   ],
   "Dereference": [
-    "*\n\nint myAge = 43;     // Variable declaration\nint* ptr = &myAge;  // Pointer declaration\n\n// Reference: Output the memory address of myAge with the pointer (0x7ffe5367e044)\nprintf(\"%p\\n\", ptr);\n\n// Dereference: Output the value of myAge with the pointer (43)\nprintf(\"%d\\n\", *ptr);",
+    "*int myAge = 43;     // Variable declarationint* ptr = &myAge;  // Pointer declaration// Reference: Output the memory address of myAge with the pointer (0x7ffe5367e044)printf(\"%p\\n\", ptr);// Dereference: Output the value of myAge with the pointer (43)printf(\"%d\\n\", *ptr);",
     "https://www.w3schools.com/c/tryc.php?filename=demo_pointers2"
   ],
   "Pointers & Arrays": [
-    "int myNumbers[4] = {25, 50, 75, 100};\nint i;\n\nfor (i = 0; i < 4; i++) {\n  printf(\"%p\\n\", &myNumbers[i]);\n}\nResult:\n\n0x7ffe70f9d8f0\n0x7ffe70f9d8f4\n0x7ffe70f9d8f8\n0x7ffe70f9d8fc",
+    "int myNumbers[4] = {25, 50, 75, 100};int i;for (i = 0; i < 4; i++) {  printf(\"%p\\n\", &myNumbers[i]);}Result:0x7ffe70f9d8f00x7ffe70f9d8f40x7ffe70f9d8f80x7ffe70f9d8fc",
     "https://www.w3schools.com/c/tryc.php?filename=demo_pointers_arrays2"
   ],
   "How Are Pointers Related to Arrays": [
-    "int myNumbers[4] = {25, 50, 75, 100};\n\n// Get the memory address of the myNumbers array\nprintf(\"%p\\n\", myNumbers);\n\n// Get the memory address of the first array element\nprintf(\"%p\\n\", &myNumbers[0]);\nResult:\n\n0x7ffe70f9d8f0\n0x7ffe70f9d8f0",
+    "int myNumbers[4] = {25, 50, 75, 100};// Get the memory address of the myNumbers arrayprintf(\"%p\\n\", myNumbers);// Get the memory address of the first array elementprintf(\"%p\\n\", &myNumbers[0]);Result:0x7ffe70f9d8f00x7ffe70f9d8f0",
     "https://www.w3schools.com/c/tryc.php?filename=demo_pointers_arrays_first"
   ],
-  "Functions": [
-    "A function is a block of code which only runs when it is called.",
-    ""
-  ],
-  "Predefined Functions": [
-    "main() \n\nprintf()\n\nscanf()",
-    ""
-  ],
-  "Create a Function": [
-    "void myFunction() {\n  // code to be executed\n}\n\nint x(){\n\n}",
-    ""
-  ],
+  "Functions": "A function is a block of code which only runs when it is called.",
+  "Predefined Functions": "main() printf()scanf()",
+  "Create a Function": "void myFunction() {  // code to be executed}int x(){}",
   "Call a Function": [
-    "// Create a function\nvoid myFunction() {\n  printf(\"I just got executed!\");\n}\n\nint main() {\n  myFunction(); // call the function\n  return 0;\n}\n\n// Outputs \"I just got executed!\"",
+    "// Create a functionvoid myFunction() {  printf(\"I just got executed!\");}int main() {  myFunction(); // call the function  return 0;}// Outputs \"I just got executed!\"",
     "https://www.w3schools.com/c/tryc.php?filename=demo_functions"
   ],
   "Parameters and Arguments": [
-    "void myFunction(char name[]) {\n  printf(\"Hello %s\\n\", name);\n}\n\nint main() {\n  myFunction(\"Liam\");\n  myFunction(\"Jenny\");\n  myFunction(\"Anja\");\n  return 0;\n}\n\n// Hello Liam\n// Hello Jenny\n// Hello Anja",
+    "void myFunction(char name[]) {  printf(\"Hello %s\\n\", name);}int main() {  myFunction(\"Liam\");  myFunction(\"Jenny\");  myFunction(\"Anja\");  return 0;}// Hello Liam// Hello Jenny// Hello Anja",
     "https://www.w3schools.com/c/tryc.php?filename=demo_functions_param"
   ],
   "Multiple Parameters": [
-    "void myFunction(char name[], int age) {\n  printf(\"Hello %s. You are %d years old.\\n\", name, age);\n}\n\nint main() {\n  myFunction(\"Liam\", 3);\n  myFunction(\"Jenny\", 14);\n  myFunction(\"Anja\", 30);\n  return 0;\n}\n\n// Hello Liam. You are 3 years old.\n// Hello Jenny. You are 14 years old.\n// Hello Anja. You are 30 years old.",
+    "void myFunction(char name[], int age) {  printf(\"Hello %s. You are %d years old.\\n\", name, age);}int main() {  myFunction(\"Liam\", 3);  myFunction(\"Jenny\", 14);  myFunction(\"Anja\", 30);  return 0;}// Hello Liam. You are 3 years old.// Hello Jenny. You are 14 years old.// Hello Anja. You are 30 years old.",
     "https://www.w3schools.com/c/tryc.php?filename=demo_functions_param_multi"
   ],
   "Pass Arrays as Function Parameters": [
-    "void myFunction(int myNumbers[5]) {\n  for (int i = 0; i < 5; i++) {\n    printf(\"%d\\n\", myNumbers[i]);\n  }\n}\n\nint main() {\n  int myNumbers[5] = {10, 20, 30, 40, 50};\n  myFunction(myNumbers);\n  return 0;\n}",
+    "void myFunction(int myNumbers[5]) {  for (int i = 0; i < 5; i++) {    printf(\"%d\\n\", myNumbers[i]);  }}int main() {  int myNumbers[5] = {10, 20, 30, 40, 50};  myFunction(myNumbers);  return 0;}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_functions_param_array"
   ],
   "Return Values": [
-    "int myFunction(int x) {\n  return 5 + x;\n}\n\nint main() {\n  printf(\"Result is: %d\", myFunction(3));\n  return 0;\n}\n\n// Outputs 8 (5 + 3)",
+    "int myFunction(int x) {  return 5 + x;}int main() {  printf(\"Result is: %d\", myFunction(3));  return 0;}// Outputs 8 (5 + 3)",
     "https://www.w3schools.com/c/tryc.php?filename=demo_functions_return"
   ],
-  "Scope": [
-    "In C, variables are only accessible inside the region they are created. This is called scope.",
-    ""
-  ],
+  "Scope": "In C, variables are only accessible inside the region they are created. This is called scope.",
   "Local Scope": [
-    "void myFunction() {\n  // Local variable that belongs to myFunction\n  int x = 5;\n\n  // Print the variable x\n  printf(\"%d\", x);\n}\n\nint main() {\n  myFunction();\n  return 0;\n}",
+    "void myFunction() {  // Local variable that belongs to myFunction  int x = 5;  // Print the variable x  printf(\"%d\", x);}int main() {  myFunction();  return 0;}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_scope"
   ],
   "Global Scope": [
-    "int x = 5;\n\nvoid myFunction() {\n  // We can use x here\n  printf(\"%d\", x);\n}\n\nint main() {\n  myFunction();\n\n  // We can also use x here\n  printf(\"%d\", x);\n  return 0;\n}",
+    "int x = 5;void myFunction() {  // We can use x here  printf(\"%d\", x);}int main() {  myFunction();  // We can also use x here  printf(\"%d\", x);  return 0;}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_scope_global"
   ],
   "Naming Variables": [
-    "int x = 5;\n\nvoid myFunction() {\n  // Local variable with the same name as the global variable (x)\n  int x = 22;\n  printf(\"%d\\n\", x); // Refers to the local variable x\n}\n\nint main() {\n  myFunction();\n\n  printf(\"%d\\n\", x); // Refers to the global variable x\n  return 0;\n}",
+    "int x = 5;void myFunction() {  // Local variable with the same name as the global variable (x)  int x = 22;  printf(\"%d\\n\", x); // Refers to the local variable x}int main() {  myFunction();  printf(\"%d\\n\", x); // Refers to the global variable x  return 0;}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_scope_global2"
   ],
-  "Function Declaration and Definition": [
-    "// Function declaration\nvoid myFunction();\n\n// The main method\nint main() {\n  myFunction();  // call the function\n  return 0;\n}\n\n// Function definition\nvoid myFunction() {\n  printf(\"I just got executed!\");\n}",
+  "method / Function Declaration and Definition": [
+    "// Function declarationvoid myFunction();// The main methodint main() {  myFunction();  // call the function  return 0;}// Function definitionvoid myFunction() {  printf(\"I just got executed!\");}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_functions_opt"
   ],
   "What About Parameters": [
-    "// Function declaration\nint myFunction(int x, int y);\n\n// The main method\nint main() {\n  int result = myFunction(5, 3); // call the function\n  printf(\"Result is = %d\", result);\n  return 0;\n}\n\n// Function definition\nint myFunction(int x, int y) {\n  return x + y;\n}",
+    "// Function declarationint myFunction(int x, int y);// The main methodint main() {  int result = myFunction(5, 3); // call the function  printf(\"Result is = %d\", result);  return 0;}// Function definitionint myFunction(int x, int y) {  return x + y;}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_functions_return4"
   ],
   "Functions Calling Other Functions": [
-    "void myFunction();\nvoid myOtherFunction();\n\nint main() {\n  myFunction(); // call myFunction (from main)\n  return 0;\n}\n\n// Define myFunction\nvoid myFunction() {\n  printf(\"Some text in myFunction\\n\");\n  myOtherFunction(); // call myOtherFunction (from myFunction)\n}\n\n// Define myOtherFunction\nvoid myOtherFunction() {\n  printf(\"Hey! Some text in myOtherFunction\\n\");\n}",
+    "void myFunction();void myOtherFunction();int main() {  myFunction(); // call myFunction (from main)  return 0;}// Define myFunctionvoid myFunction() {  printf(\"Some text in myFunction\\n\");  myOtherFunction(); // call myOtherFunction (from myFunction)}// Define myOtherFunctionvoid myOtherFunction() {  printf(\"Hey! Some text in myOtherFunction\\n\");}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_functions_other"
   ],
   "Recursion": [
-    "function calls itself\n\nint sum(int k);\n\nint main() {\n  int result = sum(10);\n  printf(\"%d\", result);\n  return 0;\n}\n\nint sum(int k) {\n  if (k > 0) {\n    return k + sum(k - 1);\n  } else {\n    return 0;\n  }\n}",
+    "function calls itselfint sum(int k);int main() {  int result = sum(10);  printf(\"%d\", result);  return 0;}int sum(int k) {  if (k > 0) {    return k + sum(k - 1);  } else {    return 0;  }}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_functions_recursion"
   ],
-  "Math Functions": [
-    "#include <math.h>",
-    ""
-  ],
+  "Math Functions": "#include <math.h>",
   "Square Root": [
     "printf(\"%f\", sqrt(16));",
     "https://www.w3schools.com/c/tryc.php?filename=demo_math_sqrt"
   ],
   "Round a Number": [
-    "printf(\"%f\", ceil(1.4));\nprintf(\"%f\", floor(1.4));",
+    "printf(\"%f\", ceil(1.4));printf(\"%f\", floor(1.4));",
     "https://www.w3schools.com/c/tryc.php?filename=demo_math_ceil_floor"
   ],
   "Power": [
@@ -395,120 +320,78 @@
     "math refresnces",
     "https://www.w3schools.com/c/c_ref_math.php"
   ],
-  "file handling": [
-    "FILE *fptr;\nfptr = fopen(filename, mode);",
-    ""
-  ],
-  "create file": [
-    "FILE *fptr;\n\n// Create a file\nfptr = fopen(\"filename.txt\", \"w\");\n\n// Close the file\nfclose(fptr);",
-    ""
-  ],
-  "Write To a File": [
-    "FILE *fptr;\n\n// Open a file in writing mode\nfptr = fopen(\"filename.txt\", \"w\");\n\n// Write some text to the file\nfprintf(fptr, \"Some text\");\n\n// Close the file\nfclose(fptr);",
-    ""
-  ],
-  "Append Content To a File": [
-    "FILE *fptr;\n\n// Open a file in append mode\nfptr = fopen(\"filename.txt\", \"a\");\n\n// Append some text to the file\nfprintf(fptr, \"\\nHi everybody!\");\n\n// Close the file\nfclose(fptr);",
-    ""
-  ],
-  "Read a File": [
-    "FILE *fptr;\n\n// Open a file in read mode\nfptr = fopen(\"filename.txt\", \"r\");",
-    ""
-  ],
-  "read file ex 1": [
-    "FILE *fptr;\n\n// Open a file in read mode\nfptr = fopen(\"filename.txt\", \"r\");\n\n// Store the content of the file\nchar myString[100];\n\n// Read the content and store it inside myString\nfgets(myString, 100, fptr);\n\n// Print the file content\nprintf(\"%s\", myString);\n\n// Close the file\nfclose(fptr);",
-    ""
-  ],
-  "Structures": [
-    "Structures (also called structs) are a way to group several related variables into one place.",
-    ""
-  ],
-  "Create a Structure": [
-    "struct MyStructure {   // Structure declaration\n  int myNum;           // Member (int variable)\n  char myLetter;       // Member (char variable)\n}; // End the structure with a semicolon",
-    ""
-  ],
+  "file handling": "FILE *fptr;fptr = fopen(filename, mode);",
+  "create file": "FILE *fptr;// Create a filefptr = fopen(\"filename.txt\", \"w\");// Close the filefclose(fptr);",
+  "Write To a File": "FILE *fptr;// Open a file in writing modefptr = fopen(\"filename.txt\", \"w\");// Write some text to the filefprintf(fptr, \"Some text\");// Close the filefclose(fptr);",
+  "Append Content To a File": "FILE *fptr;// Open a file in append modefptr = fopen(\"filename.txt\", \"a\");// Append some text to the filefprintf(fptr, \"\\nHi everybody!\");// Close the filefclose(fptr);",
+  "Read a File": "FILE *fptr;// Open a file in read modefptr = fopen(\"filename.txt\", \"r\");",
+  "read file ex 1": "FILE *fptr;// Open a file in read modefptr = fopen(\"filename.txt\", \"r\");// Store the content of the filechar myString[100];// Read the content and store it inside myStringfgets(myString, 100, fptr);// Print the file contentprintf(\"%s\", myString);// Close the filefclose(fptr);",
+  "Structures": "Structures (also called structs) are a way to group several related variables into one place.",
+  "Create a Structure": "struct MyStructure {   // Structure declaration  int myNum;           // Member (int variable)  char myLetter;       // Member (char variable)}; // End the structure with a semicolon",
   "Access Structure Members": [
-    "// Create a structure called myStructure\nstruct myStructure {\n  int myNum;\n  char myLetter;\n};\n\nint main() {\n  // Create a structure variable of myStructure called s1\n  struct myStructure s1;\n\n  // Assign values to members of s1\n  s1.myNum = 13;\n  s1.myLetter = 'B';\n\n  // Print values\n  printf(\"My number: %d\\n\", s1.myNum);\n  printf(\"My letter: %c\\n\", s1.myLetter);\n\n  return 0;\n}",
+    "// Create a structure called myStructurestruct myStructure {  int myNum;  char myLetter;};int main() {  // Create a structure variable of myStructure called s1  struct myStructure s1;  // Assign values to members of s1  s1.myNum = 13;  s1.myLetter = 'B';  // Print values  printf(\"My number: %d\\n\", s1.myNum);  printf(\"My letter: %c\\n\", s1.myLetter);  return 0;}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_struct"
   ],
   "string in struture": [
-    "struct myStructure {\n  int myNum;\n  char myLetter;\n  char myString[30]; // String\n};\n\nint main() {\n  struct myStructure s1;\n\n  // Assign a value to the string using the strcpy function\n  strcpy(s1.myString, \"Some text\");\n\n  // Print the value\n  printf(\"My string: %s\", s1.myString);\n\n  return 0;\n}",
+    "struct myStructure {  int myNum;  char myLetter;  char myString[30]; // String};int main() {  struct myStructure s1;  // Assign a value to the string using the strcpy function  strcpy(s1.myString, \"Some text\");  // Print the value  printf(\"My string: %s\", s1.myString);  return 0;}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_struct_strings2"
   ],
   "Copy Structures": [
-    "struct myStructure s1 = {13, 'B', \"Some text\"};\nstruct myStructure s2;\n\ns2 = s1;",
+    "struct myStructure s1 = {13, 'B', \"Some text\"};struct myStructure s2;s2 = s1;",
     "https://www.w3schools.com/c/tryc.php?filename=demo_struct_copy"
   ],
   "Modify Values struture": [
-    "struct myStructure {\n  int myNum;\n  char myLetter;\n  char myString[30];\n};\n\nint main() {\n  // Create a structure variable and assign values to it\n  struct myStructure s1 = {13, 'B', \"Some text\"};\n\n  // Modify values\n  s1.myNum = 30;\n  s1.myLetter = 'C';\n  strcpy(s1.myString, \"Something else\");\n\n  // Print values\n  printf(\"%d %c %s\", s1.myNum, s1.myLetter, s1.myString);\n\n  return 0;\n}",
+    "struct myStructure {  int myNum;  char myLetter;  char myString[30];};int main() {  // Create a structure variable and assign values to it  struct myStructure s1 = {13, 'B', \"Some text\"};  // Modify values  s1.myNum = 30;  s1.myLetter = 'C';  strcpy(s1.myString, \"Something else\");  // Print values  printf(\"%d %c %s\", s1.myNum, s1.myLetter, s1.myString);  return 0;}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_struct_modify"
   ],
   "Structures and Pointers": [
-    "// Define a struct\nstruct Car {\n  char brand[50];\n  int year;\n};\n\nint main() {\n  struct Car car = {\"Toyota\", 2020};\n\n  // Declare a pointer to the struct\n  struct Car *ptr = &car;\n\n  // Access members using the -> operator\n  printf(\"Brand: %s\\n\", ptr->brand);\n  printf(\"Year: %d\\n\", ptr->year);\n\n  return 0;\n}",
+    "// Define a structstruct Car {  char brand[50];  int year;};int main() {  struct Car car = {\"Toyota\", 2020};  // Declare a pointer to the struct  struct Car *ptr = &car;  // Access members using the -> operator  printf(\"Brand: %s\\n\", ptr->brand);  printf(\"Year: %d\\n\", ptr->year);  return 0;}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_structs_pointers"
   ],
   "Passing Struct Pointers to Functions": [
-    "struct Car {\n  char brand[20];\n  int year;\n};\n\n// Function that takes a pointer to a Car struct and updates the year\nvoid updateYear(struct Car *c) {\n  c->year = 2025;  // Change the year\n}\n\nint main() {\n  struct Car myCar = {\"Toyota\", 2020};\n\n  updateYear(&myCar);  // Pass a pointer so the function can change the year\n\n  printf(\"Brand: %s\\n\", myCar.brand);\n  printf(\"Year: %d\\n\", myCar.year);\n\n  return 0;\n}",
+    "struct Car {  char brand[20];  int year;};// Function that takes a pointer to a Car struct and updates the yearvoid updateYear(struct Car *c) {  c->year = 2025;  // Change the year}int main() {  struct Car myCar = {\"Toyota\", 2020};  updateYear(&myCar);  // Pass a pointer so the function can change the year  printf(\"Brand: %s\\n\", myCar.brand);  printf(\"Year: %d\\n\", myCar.year);  return 0;}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_structs_pointers2"
   ],
-  "Unions": [
-    "A union is similar to a struct in that it can store members of different data types.",
-    ""
-  ],
-  "Declare a Union": [
-    "union myUnion {        // Union declaration\n  int myNum;           // Member (int)\n  char myLetter;       // Member (char)\n  char myString[30];   // Member (char array)\n}; \n\nint main() {\n  union myUnion u1;  // Create a union variable with the name \"u1\":\n  return 0;\n}",
-    ""
-  ],
+  "Unions": "A union is similar to a struct in that it can store members of different data types.",
+  "Declare a Union": "union myUnion {        // Union declaration  int myNum;           // Member (int)  char myLetter;       // Member (char)  char myString[30];   // Member (char array)}; int main() {  union myUnion u1;  // Create a union variable with the name \"u1\":  return 0;}",
   "Access Union Members": [
-    "union myUnion {\n  int myNum;\n  char myLetter;\n  char myString[30];\n};\n\nint main() {\n  union myUnion u1;\n\n  u1.myNum = 1000;\n\n  // Since this is the last value written to the union, myNum no longer holds 1000 - its value is now invalid\n  u1.myLetter = 'A';\n\n  printf(\"myNum: %d\\n\", u1.myNum); // This value is no longer reliable\n  printf(\"myLetter: %c\\n\", u1.myLetter); // Prints 'A'\n\n  return 0;\n}",
+    "union myUnion {  int myNum;  char myLetter;  char myString[30];};int main() {  union myUnion u1;  u1.myNum = 1000;  // Since this is the last value written to the union, myNum no longer holds 1000 - its value is now invalid  u1.myLetter = 'A';  printf(\"myNum: %d\\n\", u1.myNum); // This value is no longer reliable  printf(\"myLetter: %c\\n\", u1.myLetter); // Prints 'A'  return 0;}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_union"
   ],
   "Size of a Union": [
-    "union myUnion {\n  int myNum;\n  char myLetter;\n  char myString[36];\n};\n\nint main() {\n  union myUnion u1;\n  printf(\"Size of union: %zu bytes\\n\", sizeof(u1));\n  return 0;\n}",
+    "union myUnion {  int myNum;  char myLetter;  char myString[36];};int main() {  union myUnion u1;  printf(\"Size of union: %zu bytes\\n\", sizeof(u1));  return 0;}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_union_size"
   ],
-  "Enums": [
-    "enum Level {\n  LOW,\n  MEDIUM,\n  HIGH\n};",
-    ""
-  ],
+  "Enums": "enum Level {  LOW,  MEDIUM,  HIGH};",
   "Change Values enums": [
-    "enum Level {\n  LOW = 25,\n  MEDIUM = 50,\n  HIGH = 75\n};",
+    "enum Level {  LOW = 25,  MEDIUM = 50,  HIGH = 75};",
     "https://www.w3schools.com/c/tryc.php?filename=demo_enum_change"
   ],
   "Enum in a Switch Statement": [
-    "enum Level {\n  LOW = 1,\n  MEDIUM,\n  HIGH\n};\n\nint main() {\n  enum Level myVar = MEDIUM;\n\n  switch (myVar) {\n    case 1:\n      printf(\"Low Level\");\n      break;\n    case 2:\n      printf(\"Medium level\");\n      break;\n    case 3:\n      printf(\"High level\");\n      break;\n  }\n  return 0;\n}",
+    "enum Level {  LOW = 1,  MEDIUM,  HIGH};int main() {  enum Level myVar = MEDIUM;  switch (myVar) {    case 1:      printf(\"Low Level\");      break;    case 2:      printf(\"Medium level\");      break;    case 3:      printf(\"High level\");      break;  }  return 0;}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_enum_switch"
   ],
   "Memory in C": [
-    "int myInt;\nfloat myFloat;\ndouble myDouble;\nchar myChar;\n\nprintf(\"%zu\\n\", sizeof(myInt));      // 4 bytes\nprintf(\"%zu\\n\", sizeof(myFloat));    // 4 bytes\nprintf(\"%zu\\n\", sizeof(myDouble));   // 8 bytes\nprintf(\"%zu\\n\", sizeof(myChar));     // 1 byte",
+    "int myInt;float myFloat;double myDouble;char myChar;printf(\"%zu\\n\", sizeof(myInt));      // 4 bytesprintf(\"%zu\\n\", sizeof(myFloat));    // 4 bytesprintf(\"%zu\\n\", sizeof(myDouble));   // 8 bytesprintf(\"%zu\\n\", sizeof(myChar));     // 1 byte",
     "https://www.w3schools.com/c/tryc.php?filename=demo_memory_sizeof"
   ],
-  "Memory Management": [
-    "Memory management is the process of handling how much memory a program uses through allocation, reallocation and deallocation (often referred to as \"freeing\"). We will introduce each of these topics in the following chapters.",
-    ""
-  ],
+  "Memory Management": "Memory management is the process of handling how much memory a program uses through allocation, reallocation and deallocation (often referred to as \"freeing\"). We will introduce each of these topics in the following chapters.",
   "Static Memory": [
-    "int students[20];\nprintf(\"%zu\", sizeof(students)); // 80 bytes",
+    "int students[20];printf(\"%zu\", sizeof(students)); // 80 bytes",
     "https://www.w3schools.com/c/tryc.php?filename=demo_memory_static"
   ],
-  "Dynamic Memory": [
-    "malloc() calloc()\n\nint *ptr1 = malloc(size);\nint *ptr2 = calloc(amount, size);",
-    ""
-  ],
+  "Dynamic Memory": "malloc() calloc()int *ptr1 = malloc(size);int *ptr2 = calloc(amount, size);",
   "Access Dynamic Memory": [
-    "ptr[0] = 12;\n\n*ptr = 12;\n\n\n\n\n// Allocate memory\nint *ptr;\nptr = calloc(4, sizeof(*ptr));\n\n// Write to the memory\n*ptr = 2;\nptr[1] = 4;\nptr[2] = 6;\n\n// Read from the memory\nprintf(\"%d\\n\", *ptr);\nprintf(\"%d %d %d\", ptr[1], ptr[2], ptr[3]);",
+    "ptr[0] = 12;*ptr = 12;// Allocate memoryint *ptr;ptr = calloc(4, sizeof(*ptr));// Write to the memory*ptr = 2;ptr[1] = 4;ptr[2] = 6;// Read from the memoryprintf(\"%d\\n\", *ptr);printf(\"%d %d %d\", ptr[1], ptr[2], ptr[3]);",
     "https://www.w3schools.com/c/tryc.php?filename=demo_memory_access"
   ],
-  "Reallocate Memory": [
-    "realloc()\n\nint *ptr2 = realloc(ptr1, size);",
-    ""
-  ],
+  "Reallocate Memory": "realloc()int *ptr2 = realloc(ptr1, size);",
   "NULL Pointer & Error Checking": [
-    "int *ptr1, *ptr2;\n\n// Allocate memory\nptr1 = malloc(4);\n\n// Attempt to resize the memory\nptr2 = realloc(ptr1, 8);\n\n// Check whether realloc is able to resize the memory or not\nif (ptr2 == NULL) {\n  // If reallocation fails\n  printf(\"Failed. Unable to resize memory\");\n} else {\n  // If reallocation is sucessful\n  printf(\"Success. 8 bytes reallocated at address %p \\n\", ptr2);\n  ptr1 = ptr2;  // Update ptr1 to point to the newly allocated memory\n}",
+    "int *ptr1, *ptr2;// Allocate memoryptr1 = malloc(4);// Attempt to resize the memoryptr2 = realloc(ptr1, 8);// Check whether realloc is able to resize the memory or notif (ptr2 == NULL) {  // If reallocation fails  printf(\"Failed. Unable to resize memory\");} else {  // If reallocation is sucessful  printf(\"Success. 8 bytes reallocated at address %p \\n\", ptr2);  ptr1 = ptr2;  // Update ptr1 to point to the newly allocated memory}",
     "https://www.w3schools.com/c/tryc.php?filename=demo_memory_reallocate_null"
   ],
   "Deallocate (free) Memory": [
-    "free(pointer);\n\n\nint *ptr;\nptr = malloc(sizeof(*ptr));\n\nfree(ptr);\nptr = NULL;\n\n\n\nexample \n\n\nint *ptr;\nptr = malloc(sizeof(*ptr)); // Allocate memory for one integer\n\n// If memory cannot be allocated, print a message and end the main() function\nif (ptr == NULL) {\n  printf(\"Unable to allocate memory\");\n  return 1;\n}\n\n// Set the value of the integer\n*ptr = 20;\n\n// Print the integer value\nprintf(\"Integer value: %d\\n\", *ptr);\n\n// Free allocated memory\nfree(ptr);\n\n// Set the pointer to NULL to prevent it from being accidentally used\nptr = NULL;",
+    "free(pointer);int *ptr;ptr = malloc(sizeof(*ptr));free(ptr);ptr = NULL;example int *ptr;ptr = malloc(sizeof(*ptr)); // Allocate memory for one integer// If memory cannot be allocated, print a message and end the main() functionif (ptr == NULL) {  printf(\"Unable to allocate memory\");  return 1;}// Set the value of the integer*ptr = 20;// Print the integer valueprintf(\"Integer value: %d\\n\", *ptr);// Free allocated memoryfree(ptr);// Set the pointer to NULL to prevent it from being accidentally usedptr = NULL;",
     "https://www.w3schools.com/c/tryc.php?filename=demo_memory_free"
   ],
   "stdlib Reference": [
