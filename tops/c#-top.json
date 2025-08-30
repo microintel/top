@@ -1,0 +1,62 @@
+{
+  "C# Syntax": [
+    "using System;\n\nnamespace HelloWorld\n{\n  class Program\n  {\n    static void Main(string[] args)\n    {\n      Console.WriteLine(\"Hello World!\");    \n    }\n  }\n}",
+    "https://www.w3schools.com/cs/trycs.php?filename=demo_helloworld"
+  ],
+  "C# Output": [
+    "Console.WriteLine(\"Hello World!\");",
+    "https://www.w3schools.com/cs/trycs.php?filename=demo_output"
+  ],
+  "The Write Method": [
+    "Console.Write(\"Hello World! \");\nConsole.Write(\"I will print on the same line.\");",
+    "https://www.w3schools.com/cs/trycs.php?filename=demo_output_write"
+  ],
+  "Single-line Comments": [
+    "// This is a comment\nConsole.WriteLine(\"Hello World!\");",
+    "https://www.w3schools.com/cs/trycs.php?filename=demo_single_comment"
+  ],
+  "C# Multi-line Comments": [
+    "/* The code below will print the words Hello World\nto the screen, and it is amazing */\nConsole.WriteLine(\"Hello World!\");",
+    "https://www.w3schools.com/cs/trycs.php?filename=demo_multi_comment"
+  ],
+  "C# Variables": [
+    "int\ndouble\nchar\nstring\nbool",
+    "null"
+  ],
+  "Declaring (Creating) Variables": [
+    "type variableName = value;\n\nstring name = \"John\";\nConsole.WriteLine(name);",
+    "https://www.w3schools.com/cs/trycs.php?filename=demo_variables"
+  ],
+  "all data Types": [
+    "int myNum = 5;\ndouble myDoubleNum = 5.99D;\nchar myLetter = 'D';\nbool myBool = true;\nstring myText = \"Hello\";",
+    "null"
+  ],
+  "Constants": [
+    "const int myNum = 15;\nmyNum = 20; // error",
+    "https://www.w3schools.com/cs/trycs.php?filename=demo_variables_const"
+  ],
+  "Display Variables": [
+    "string name = \"John\";\nConsole.WriteLine(\"Hello \" + name);",
+    "https://www.w3schools.com/cs/trycs.php?filename=demo_variables2"
+  ],
+  "Declare Many Variables": [
+    "int x = 5, y = 6, z = 50;\nConsole.WriteLine(x + y + z);",
+    "https://www.w3schools.com/cs/trycs.php?filename=demo_variables5"
+  ],
+  "C# Identifiers": [
+    "// Good\nint minutesPerHour = 60;\n\n// OK, but not so easy to understand what m actually is\nint m = 60;",
+    "https://www.w3schools.com/cs/trycs.php?filename=demo_variables_identifiers"
+  ],
+  "Integer Types": [
+    "int myNum = 100000;\nConsole.WriteLine(myNum);",
+    "https://www.w3schools.com/cs/trycs.php?filename=demo_type_int"
+  ],
+  "Long": [
+    "long myNum = 15000000000L;\nConsole.WriteLine(myNum);",
+    "https://www.w3schools.com/cs/trycs.php?filename=demo_type_long"
+  ],
+  "Floating Point Types": [
+    "float myNum = 5.75F;\nConsole.WriteLine(myNum);",
+    "https://www.w3schools.com/cs/trycs.php?filename=demo_type_float"
+  ]
+}
