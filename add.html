@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add</title>
+    <style>
+        /* Base styles for mobile-first approach */
+        body { font-family: sans-serif; background-color: #f0f2f5; color: #333; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; min-height: 100vh; margin: 0; padding: 1rem; }
+        .c { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 100%; box-sizing: border-box; }
+        h1 { text-align: center; color: #5a5a5a; }
+        .f { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem; }
+        input[type="text"], input[type="url"], textarea { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        textarea { min-height: 100px; resize: vertical; }
+        button { padding: 0.75rem 1.5rem; border: none; border-radius: 4px; background-color: #007BFF; color: white; cursor: pointer; transition: background-color 0.3s; }
+        button:hover { background-color: #0056b3; }
+        .a { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem; }
+        .l { background-color: #28a745; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer; text-align: center; }
+        .l:hover { background-color: #218838; }
+        #i { display: none; }
+        .i { background: #f9f9f9; padding: 1rem; border-radius: 4px; border-left: 5px solid #007BFF; margin-bottom: 1rem; }
+        .i h3 { margin: 0 0 0.5rem; color: #007BFF; }
+        .i pre { background: #eef; padding: 0.75rem; border-radius: 4px; white-space: pre-wrap; word-wrap: break-word; }
+        .i a { color: #007BFF; text-decoration: none; }
+        .i a:hover { text-decoration: underline; }
+
+        /* Media query for desktop views */
+        @media (min-width: 768px) {
+            body { justify-content: center; padding: 2rem; }
+            .c { width: 700px; }
+            .f { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+            .f button { grid-column: span 2; }
+            .a { flex-direction: row; justify-content: space-between; align-items: center; }
+            .a button, .a .l { flex-grow: 1; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="c">
+        <h1> AddTopic</h1>
+        <div class="f">
+            <input type="text" id="t" placeholder="Topic Name">
+            <textarea id="e" placeholder="Example Code"></textarea>
+            <input type="url" id="o" placeholder="Output URL">
+            <button onclick="a()">Add</button>
+        </div>
+        <div class="a">
+            <button onclick="x()">Export</button>
+            <label for="i" class="l">Import</label>
+            <input type="file" id="i" accept=".json" onchange="m(event)">
+        </div>
+        <div id="l"></div>
+    </div>
+    <script>
+        let d = JSON.parse(localStorage.getItem('d')) || {};
+        const s = () => localStorage.setItem('d', JSON.stringify(d));
+        const p = () => {
+            const l = document.getElementById('l');
+            l.innerHTML = '';
+            if (Object.keys(d).length === 0) {
+                l.innerHTML = '<p style="text-align: center;">No topics added yet.</p>';
+                return;
+            }
+            for (const [n, [c, u]] of Object.entries(d)) {
+                const i = document.createElement('div');
+                i.className = 'i';
+                i.innerHTML = `<h3>${n}</h3><pre><code>${c}</code></pre><p><strong>URL:</strong> <a href="${u}" target="_blank">${u}</a></p>`;
+                l.appendChild(i);
+            }
+        };
+        const a = () => {
+            const t = document.getElementById('t').value.trim();
+            const e = document.getElementById('e').value.trim();
+            const o = document.getElementById('o').value.trim();
+            if (!t || !e || !o) {
+                alert('Fill all fields.');
+                return;
+            }
+            d[t] = [e, o];
+            s();
+            p();
+            document.getElementById('t').value = '';
+            document.getElementById('e').value = '';
+            document.getElementById('o').value = '';
+        };
+        const x = () => {
+            const s = JSON.stringify(d, null, 2);
+            const b = new Blob([s], { type: 'application/json' });
+            const u = URL.createObjectURL(b);
+            const a = document.createElement('a');
+            a.href = u;
+            a.download = 'code.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(u);
+        };
+        const m = (e) => {
+            const f = e.target.files[0];
+            if (!f) return;
+            const r = new FileReader();
+            r.onload = (e) => {
+                try {
+                    const i = JSON.parse(e.target.result);
+                    d = Object.assign(d, i);
+                    s();
+                    p();
+                    alert('Imported successfully!');
+                } catch (er) {
+                    alert('Invalid JSON file.');
+                }
+            };
+            r.readAsText(f);
+        };
+        document.addEventListener('DOMContentLoaded', p);
+    </script>
+</body>
+  </html>
+  
