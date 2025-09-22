@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lipstick</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+body{
+  font-family:sans-serif;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  transition:background .3s,color .3s
+}
+header,footer{
+  text-align:center;
+  padding:15px;
+  position:relative
+}
+header h1{
+  margin:0;
+  font-size:20px
+}
+header p{
+  font-size:12px;
+  margin-top:6px
+}
+#themeToggle{
+  position:absolute;
+  top:15px;
+  right:15px;
+  cursor:pointer;
+  font-size:22px
+}
+main{
+  flex:1;
+  padding:15px;
+  max-width:600px;
+  margin:auto;
+  width:100%
+}
+select,button{
+  width:100%;
+  padding:10px;
+  margin:6px 0;
+  border:1px solid grey;
+  border-radius:4px
+}
+button{
+  cursor:pointer
+}
+#o{
+  width:100%;
+  min-height:200px;
+  border:1px solid grey;
+  padding:10px;
+  margin-top:10px;
+  overflow:auto;
+  word-wrap:break-word;
+  border-radius:4px
+}
+a{
+  text-decoration:underline;
+  display:block;
+  margin-top:10px
+}
+footer{
+  font-size:13px
+}
+body.dark{
+  background:black;
+  color:white
+}
+body.dark select,body.dark button,body.dark #o{
+  background:black;
+  color:white;
+  border:1px solid grey
+}
+body.dark a{
+  color:white
+}
+body.light{
+  background:white;
+  color:black
+}
+body.light select,body.light button,body.light #o{
+  background:white;
+  color:black;
+  border:1px solid grey
+}
+body.light a{
+  color:black
+}
+</style>
+</head>
+<body>
+
+<header style="background:transparent;color:grey;  padding: 20px; text-align: center; font-family: Arial, sans-serif; position: relative;">
+  <h1 onclick="location.href='lip.html'" style="margin: 0 0 10px 0; font-size: 2em;">Lipstick</h1>
+  <p style="margin: 0; font-size: 1em; line-height: 1.5; max-width: 700px; margin-left: auto; margin-right: auto;">
+    <strong>Lipstick</strong> is a web app for us to access lab programs in a structured way, allowing us to easily view, copy, and run programs on our system without using WhatsApp or searching files, making learning faster and more organized.
+  </p>
+  <i id="themeToggle" class="bi bi-sun-fill" style="position: absolute; top: 20px; right: 20px; font-size: 1.5em; cursor: pointer; color: grey;"></i>
+</header>
+
+<main>
+  <select id="s" onchange="uSub(this.value)">
+    <option value="">Semester</option>
+  </select>
+
+  <select id="sub" onchange="uPr(this.value)">
+    <option value="">Subject</option>
+  </select>
+
+  <select id="p" onchange="sh(this.value)">
+    <option value="">Programs</option>
+  </select>
+
+  <button onclick="cp()">Copy</button>
+  <div id="o">nkn</div>
+</main>
+
+<footer>
+  Developed by Microintel
+</footer>
+
+<script>
+let d;
+
+async function fetchData() {
+  try {
+    const response = await fetch('https://microintel.github.io/top/lipstick/lipstick.json');
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    d = await response.json();
+    pSem();
+  } catch (error) {
+    document.getElementById("o").innerText = "Error loading data: " + error.message;
+  }
+}
+
+function pSem(){
+ let s=document.getElementById("s");
+ Object.keys(d).forEach(x=>{
+   let o=document.createElement("option");
+   o.value=x;
+   o.text=x;
+   s.appendChild(o);
+ });
+}
+
+function uSub(v){
+ let sub=document.getElementById("sub"),p=document.getElementById("p");
+ sub.innerHTML='<option value="">Subject</option>';
+ p.innerHTML='<option value="">Programs</option>';
+ document.getElementById("o").innerText="nssn";
+ if(v&&d[v]){
+   Object.keys(d[v]).forEach(x=>{
+     let o=document.createElement("option");
+     o.value=x;
+     o.text=x;
+     sub.appendChild(o);
+   });
+ }
+}
+
+function uPr(v){
+ let s=document.getElementById("s").value,p=document.getElementById("p");
+ p.innerHTML='<option value="">Programs</option>';
+ document.getElementById("o").innerText="nssn";
+ if(s&&v&&d[s]&&d[s][v]){
+   Object.keys(d[s][v]).forEach(x=>{
+     let o=document.createElement("option");
+     o.value=x;
+     o.text=x;
+     p.appendChild(o);
+   });
+ }
+}
+
+async function sh(v){
+ let s=document.getElementById("s").value,sub=document.getElementById("sub").value,u=d[s][sub][v];
+ let out=document.getElementById("o");
+ if(!u){out.innerText="Invalid";return;}
+ if(u.endsWith(".pdf")){
+   out.innerHTML='PDF file available.<br><a href="'+u+'" target="_blank">Open PDF</a><a href="'+u+'" download>Download PDF</a>';
+   return;
+ }
+ if(u.startsWith("http")){
+   try{
+     let r=await fetch(u);
+     let t=await r.text();
+     out.innerText=t;
+   }catch(e){
+     out.innerText="Error:"+e.message;
+   }
+ }else{
+   out.innerText=u;
+ }
+}
+
+function cp(){
+ let t=document.getElementById("o").innerText;
+ navigator.clipboard.writeText(t).then(()=>alert("Copied!"));
+}
+
+function setTheme(t){
+ document.body.className=t;
+ localStorage.setItem("theme",t);
+ document.getElementById("themeToggle").className=t==="dark"?"bi bi-sun-fill":"bi bi-moon-fill"
+}
+
+document.getElementById("themeToggle").onclick=function(){
+ let c=document.body.classList.contains("dark")?"dark":"light";
+ setTheme(c==="dark"?"light":"dark");
+}
+
+let saved=localStorage.getItem("theme")||"dark";
+setTheme(saved);
+
+fetchData();
+</script>
+</body>
+</html>
