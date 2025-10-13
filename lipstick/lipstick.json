@@ -1,8 +1,6 @@
 {
   "Sem 3": {
     "C#": {
-      "Lab 1 - 3": "https://microintel.github.io/top/lipstick/Sem3/Csharp/lab--1--3.pdf",
-      "Lab 4 - 7": "https://microintel.github.io/top/lipstick/Sem3/Csharp/lab--4--7.pdf",
       "jagged array lab-1": "https://microintel.github.io/top/lipstick/Sem3/Csharp/jaggedArray.cs",
       "point lab-2": "https://microintel.github.io/top/lipstick/Sem3/Csharp/point.cs",
       "pointIndex lab-3": "https://microintel.github.io/top/lipstick/Sem3/Csharp/pointIndex.cs",
@@ -12,6 +10,26 @@
     },
     "C": {
       "Circular Q": "https://microintel.github.io/top/lipstick/Sem3/C/Circular_Q.c"
+    },
+    "Java (OOPs)": {
+      "Java ex1": "https://microintel.github.io/top/lipstick/Sem3/example.c",
+      "Java ex2": "https://microintel.github.io/top/lipstick/Sem3/example.c"
+    },
+    "R": {
+      "R ex1": "https://microintel.github.io/top/lipstick/Sem3/example.c",
+      "R ex2": "https://microintel.github.io/top/lipstick/Sem3/example.c"
+    },
+    "Assembly": {
+      "Assembly ex1": "https://microintel.github.io/top/lipstick/Sem3/example.c",
+      "Assembly ex2": "https://microintel.github.io/top/lipstick/Sem3/example.c"
+    },
+    "C++": {
+      "C++ ex1": "https://microintel.github.io/top/lipstick/Sem3/example.c",
+      "C++ ex2": "https://microintel.github.io/top/lipstick/Sem3/example.c"
+    },
+    "Python": {
+      "Python ex1": "https://microintel.github.io/top/lipstick/Sem3/example.c",
+      "Python ex2": "https://microintel.github.io/top/lipstick/Sem3/example.c"
     }
   }
 }
