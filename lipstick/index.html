@@ -3,318 +3,244 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lipstick</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- PrismJS (Dark Theme) -->
+<link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-clike.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+
 <style>
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0px;
-    display: flex;
-    width: 90%;
-    flex-direction: column;
-    justify-content: center;
-    **align-items: center;
-    min-height: 100vh;
-    transition: background .5s, color .5s;
-}
-
-header, footer {
-    text-align: center;
-    padding: 15px;
-    position: relative;
-    width: 100%;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 20px;
-}
-
-header p {
-    font-size: 12px;
-    margin-top: 6px;
-}
-
-#themeToggle {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    cursor: pointer;
-    font-size: 22px;
-}
-
-main {
-    flex: 1;
-    padding: 15px;
-    max-width: 600px;
-    min-width: 320px;
-    margin: 5px;
-    width: 100%;
-}
-
-select, button {
-    width: 90%;
-    padding: 10px;
-    margin: 6px 0;
-    border: 1px solid grey;
-    border-radius: 4px;
-}
-
-button {
-    cursor: pointer;
-}
-
-#o {
-    width: 83%;
-    min-height: 200px;
-    border: 1px solid grey;
-    padding: 10px;
-    margin-top: 10px;
-    overflow: auto;
-    word-wrap: break-word;
-    border-radius: 4px;
-    **margin-left: auto; 
-    **margin-right: auto; 
-}
-
-a {
-    text-decoration: underline;
-    display: block;
-    margin-top: 10px;
-}
-
-footer {
-    font-size: 13px;
-}
-
-body.dark {
-    background: black;
-    color: white;
-}
-
-body.dark select, body.dark button, body.dark #o {
-    background: black;
-    color: white;
-    border: 1px solid grey;
-}
-
-body.dark a {
-    color: white;
-}
-
-body.light {
-    background: white;
-    color: black;
-}
-
-body.light select, body.light button, body.light #o {
-    background: white;
-    color: black;
-    border: 1px solid grey;
-}
-
-body.light a {
-    color: black;
-}
-
-@media (min-width: 600px) {
+    * { box-sizing: border-box; font-family: 'Poppins', sans-serif; }
     body {
-        width: 100%;
+        margin: 0;
+        background: black;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        padding: 6px;
     }
-
-    header {
-        padding: 20px;
-        width: 600px;
+    .app-name {
+        position: absolute;
+        top: 6px;
+        left: 10px;
+        font-size: 0.95rem;
+        color: white;
+        opacity: 0.9;
+        font-weight: 500;
     }
-
-    header h1 {
-        font-size: 2.5em;
+    .top-bar {
+        background: black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
+        padding: 6px;
+        border-radius: 10px;
+        width: 96%;
+        max-width: 340px;
+        margin-top: 20px;
     }
-
-    header p {
-        font-size: 1em;
+    select {
+        flex: 1;
+        min-width: 32%;
+        font-size: 0.75rem;
+        padding: 4px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
     }
-
-    #themeToggle {
-        top: 25px;
-        right: 25px;
+    .result-box {
+        margin-top: 10px;
+        background: black;
+        width: 96%;
+        color:white;
+        max-width: 340px;
+        flex: 1;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        padding: 12px;
+        font-size: 0.85rem;
+        overflow-y: auto;
+        position: relative;
     }
-
-    main {
-        padding: 20px;
-        width: 600px;
+    pre {
+        position: relative;
+        background: transparent;
+        margin-top: 25px;
     }
-
-    select, button {
-        width: 100%;
+    pre, code {
+    background: #000 !important;
+    color: #fff !important;
+    border-radius: 0px;
+    padding: 0px;
     }
-
-    #o {
-        width: 100%;
+    .copy-btn {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        background: aqua;
+        color: black;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.7rem;
     }
-}
+    .copy-btn:hover {
+        background: #009e86;
+    }
+    footer {
+        margin-top: 8px;
+        text-align: center;
+        font-size: 0.7rem;
+        color: white;
+        opacity: 0.9;
+    }
+    footer a {
+        color: white;
+        text-decoration: underline;
+        cursor: pointer;
+    }
 </style>
-<style>
-#o pre {
-    background: transparent !important;
-    padding: 0;
-    margin: 0;
-}
-#o code {
-    background: transparent !important;
-    padding: 0;
-    margin: 0;
-}
-</style>
-
 </head>
 <body>
 
-<header style="background:transparent;color:grey;  padding: 20px; text-align: center; font-family: Arial, sans-serif; position: relative;">
-  <h1 onclick="location.href='lip.html'" style="margin: 0 0 0px 0; font-size: 2em;">Lipstick</h1>
-  <p style="margin: 0; font-size: 1em; line-height: 1.5;  margin-left: 0px; margin-right: 0px;">
-    <strong>Lipstick</strong> is a web app for us to access lab programs in a structured way, allowing us to easily view, copy, and run programs on our system without using WhatsApp or searching files, making learning faster and more organized.
-  </p>
-  <i id="themeToggle" class="bi bi-sun-fill" style="position: absolute; top: 20px; right: 40px; font-size: 1.5em; cursor: pointer; color: grey;"></i>
-</header>
+<div class="app-name">Lipstick</div>
 
-<main>
-  <select id="s" onchange="uSub(this.value)">
-    <option value="">Semester</option>
-  </select>
+<div class="top-bar">
+    <select id="semSelect"><option value="">Sem</option></select>
+    <select id="subSelect"><option value="">Sub</option></select>
+    <select id="fileSelect"><option value="">File</option></select>
+</div>
 
-  <select id="sub" onchange="uPr(this.value)">
-    <option value="">Subject</option>
-  </select>
-
-  <select id="p" onchange="sh(this.value)">
-    <option value="">Programs</option>
-  </select>
-
-  <button onclick="cp()">Copy</button>
-  <div id="o">nkn</div>
-</main>
+<div class="result-box" id="result">
+    <em>NkN...</em>
+</div>
 
 <footer>
-  Developed by Microintel
+     Developed by AI with Microintel<br>
+    <a onclick="showTerms()">Terms & Conditions</a>
 </footer>
 
 <script>
-    function chec() {
-  let pass;
-  do {
-    pass = prompt("Enter the password:");
-    if (pass === null) location.reload(); 
-    if (pass !== "Nkn") {
-      alert("Incorrect password! Please try again.");
+const dataURL = "https://microintel.github.io/top/lipstick/lipstick.json";
+let jsonData = {};
+
+async function loadData() {
+    try {
+        const res = await fetch(dataURL);
+        jsonData = await res.json();
+        const semSelect = document.getElementById("semSelect");
+        Object.keys(jsonData).forEach(sem => {
+            const opt = document.createElement("option");
+            opt.value = sem;
+            opt.textContent = sem;
+            semSelect.appendChild(opt);
+        });
+    } catch (err) {
+        Swal.fire({ icon: "error", title: "Error loading JSON", text: err.message });
     }
-  } while (pass !== "Nkn");
+}
 
-  alert("Password correct! You may continue on this page.");
+document.getElementById("semSelect").addEventListener("change", () => {
+    const sem = document.getElementById("semSelect").value;
+    const subSelect = document.getElementById("subSelect");
+    const fileSelect = document.getElementById("fileSelect");
+    subSelect.innerHTML = '<option value="">Sub</option>';
+    fileSelect.innerHTML = '<option value="">File</option>';
+    if (!sem) return;
+
+    Object.keys(jsonData[sem]).forEach(sub => {
+        const opt = document.createElement("option");
+        opt.value = sub;
+        opt.textContent = sub;
+        subSelect.appendChild(opt);
+    });
+});
+
+document.getElementById("subSelect").addEventListener("change", () => {
+    const sem = document.getElementById("semSelect").value;
+    const sub = document.getElementById("subSelect").value;
+    const fileSelect = document.getElementById("fileSelect");
+    fileSelect.innerHTML = '<option value="">File</option>';
+    if (!sub) return;
+
+    Object.keys(jsonData[sem][sub]).forEach(file => {
+        const opt = document.createElement("option");
+        opt.value = file;
+        opt.textContent = file;
+        fileSelect.appendChild(opt);
+    });
+});
+
+// Automatically fetch when file is selected
+document.getElementById("fileSelect").addEventListener("change", showData);
+
+async function showData() {
+    const sem = document.getElementById("semSelect").value;
+    const sub = document.getElementById("subSelect").value;
+    const file = document.getElementById("fileSelect").value;
+    if (!sem || !sub || !file) return;
+
+    const url = jsonData[sem][sub][file];
+    try {
+        const res = await fetch(url);
+        const codeText = await res.text();
+
+        const resultBox = document.getElementById("result");
+        resultBox.innerHTML = `
+            <button class="copy-btn" onclick="copyCode()">Copy</button>
+            <h4>${file}</h4>
+            <pre><code class="language-c" id="codeArea">${escapeHTML(codeText)}</code></pre>
+        `;
+
+        Prism.highlightAll();
+    } catch (err) {
+        Swal.fire({ icon: "error", title: "Error loading file", text: err.message });
     }
-
-   //chec(); 
-let d;
-
-async function fetchData() {
-  try {
-    const response = await fetch('https://microintel.github.io/top/lipstick/lipstick.json');
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    d = await response.json();
-    pSem();
-  } catch (error) {
-    document.getElementById("o").innerText = "Error loading data: " + error.message;
-  }
 }
 
-function pSem(){
- let s=document.getElementById("s");
- Object.keys(d).forEach(x=>{
-   let o=document.createElement("option");
-   o.value=x;
-   o.text=x;
-   s.appendChild(o);
- });
+function copyCode() {
+    const code = document.getElementById("codeArea").innerText;
+    navigator.clipboard.writeText(code);
+    Swal.fire({ icon: "success", title: "Copied!", timer: 1000, showConfirmButton: false });
 }
 
-function uSub(v){
- let sub=document.getElementById("sub"),p=document.getElementById("p");
- sub.innerHTML='<option value="">Subject</option>';
- p.innerHTML='<option value="">Programs</option>';
- document.getElementById("o").innerText="nssn";
- if(v&&d[v]){
-   Object.keys(d[v]).forEach(x=>{
-     let o=document.createElement("option");
-     o.value=x;
-     o.text=x;
-     sub.appendChild(o);
-   });
- }
+function escapeHTML(str) {
+    return str.replace(/[&<>"']/g, function (m) {
+        return ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#039;'
+        })[m];
+    });
 }
 
-function uPr(v){
- let s=document.getElementById("s").value,p=document.getElementById("p");
- p.innerHTML='<option value="">Programs</option>';
- document.getElementById("o").innerText="nssn";
- if(s&&v&&d[s]&&d[s][v]){
-   Object.keys(d[s][v]).forEach(x=>{
-     let o=document.createElement("option");
-     o.value=x;
-     o.text=x;
-     p.appendChild(o);
-   });
- }
+function showTerms() {
+    Swal.fire({
+        title: "Lipstick – Terms & Conditions",
+        html: `
+        <p style="text-align:left; font-size:0.85rem;">
+        Lipstick is a web app for us to access lab programs in a structured way, allowing us to easily view, copy, and run programs on our system without using WhatsApp or searching files, making learning faster and more organized.<br><br>
+        <s>Just like how one gets lipstick and applies it to their lips, this app helps you apply knowledge easily and beautifully</s>.<br><br>
+        It is not developed for any forgery or copying lab exams, but purely for learning and understanding purposes.<br><br>
+        <b>Developed by Microintel</b>
+        </p>`,
+        confirmButtonText: "Close",
+        confirmButtonColor: "#00c9a7"
+    });
 }
 
-async function sh(v){
- let s=document.getElementById("s").value,sub=document.getElementById("sub").value,u=d[s][sub][v];
- let out=document.getElementById("o");
- if(!u){out.innerText="Invalid";return;}
- if(u.endsWith(".pdf")){
-   out.innerHTML='PDF file available.<br><a href="'+u+'" target="_blank">Open PDF</a><a href="'+u+'" download>Download PDF</a>';
-   return;
- }
- if(u.startsWith("http")){
- try{
- let r=await fetch(u);
- let t=await r.text();
- out.innerHTML = `<pre><code class="language-c">${t.replace(/[&<>]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]))}</code></pre>`;
- Prism.highlightAll();
- }catch(e){
- out.innerText="Error:"+e.message;
- }
- }else{
- out.innerHTML = `<pre><code class="language-c">${u.replace(/[&<>]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]))}</code></pre>`;
- Prism.highlightAll();
- }
-}
-
-function cp(){
- let t=document.getElementById("o").innerText;
- navigator.clipboard.writeText(t).then(()=>alert("Copied!"));
-}
-
-function setTheme(t){
- document.body.className=t;
- localStorage.setItem("theme",t);
- document.getElementById("themeToggle").className=t==="dark"?"bi bi-sun-fill":"bi bi-moon-fill"
-}
-
-document.getElementById("themeToggle").onclick=function(){
- let c=document.body.classList.contains("dark")?"dark":"light";
- setTheme(c==="dark"?"light":"dark");
-}
-
-let saved=localStorage.getItem("theme")||"dark";
-setTheme(saved);
-
-fetchData();
+loadData();
 </script>
 </body>
 </html>
