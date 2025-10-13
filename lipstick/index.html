@@ -208,7 +208,7 @@ body.light a {
   let pass;
   do {
     pass = prompt("Enter the password:");
-    if (pass === null) return; // stop if user cancels
+    if (pass === null) location.reload(); 
     if (pass !== "Nkn") {
       alert("Incorrect password! Please try again.");
     }
