@@ -204,6 +204,20 @@ body.light a {
 </footer>
 
 <script>
+    function chec() {
+  let pass;
+  do {
+    pass = prompt("Enter the password:");
+    if (pass === null) return; // stop if user cancels
+    if (pass !== "Nkn") {
+      alert("Incorrect password! Please try again.");
+    }
+  } while (pass !== "Nkn");
+
+  alert("Password correct! You may continue on this page.");
+    }
+
+   chec(); 
 let d;
 
 async function fetchData() {
