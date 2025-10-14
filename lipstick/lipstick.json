@@ -9,7 +9,14 @@
       "delegates lab-6": "https://microintel.github.io/top/lipstick/Sem3/Csharp/delegates.cs"
     },
     "C": {
-      "Circular Q": "https://microintel.github.io/top/lipstick/Sem3/C/Circular_Q.c"
+    "Array lab1": "https://microintel.github.io/top/lipstick/Sem3/C/Array--lab-1.c",
+    "Matrix lab2": "https://microintel.github.io/top/lipstick/Sem3/C/Matrix--lab-2.c",
+    "Book lab3": "https://microintel.github.io/top/lipstick/Sem3/C/book--lab-3.c",
+    "infix to postix lab4": "https://microintel.github.io/top/lipstick/Sem3/C/infix-postfix--lab-4.c",
+      "postfix evaluation lab 5a": "https://microintel.github.io/top/lipstick/Sem3/C/postfix-evaluation-lab-5a.c",
+      "Tower of hanoi lab 5b": "https://microintel.github.io/top/lipstick/Sem3/C/tower-of-hanoi--lab-5b.c",
+      "Circular Q lab6": "https://microintel.github.io/top/lipstick/Sem3/C/Circular--lab-6.c"
+      
     },
     "Java (OOPs)": {
       "Java ex1": "https://microintel.github.io/top/lipstick/Sem3/example.c",
