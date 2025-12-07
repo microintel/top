@@ -7,14 +7,17 @@
 <!-- SweetAlert2 -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<!-- PrismJS (Dark Theme) -->
+<!-- PrismJS (Dark Theme + Line Numbers) -->
 <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
 <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-clike.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
 
 <style>
     * { box-sizing: border-box; font-family: 'Poppins', sans-serif; }
@@ -78,15 +81,14 @@
         margin-top: 25px;
     }
     pre, code {
-    background: #000 !important;
-    color: #fff !important;
-    border-radius: 0px;
-    padding: 0px;
+        background: #000 !important;
+        color: #fff !important;
+        border-radius: 0px;
+        padding: 0px;
     }
-    .copy-btn {
+    .copy-btn, .ai-btn {
         position: absolute;
         top: 8px;
-        right: 10px;
         background: aqua;
         color: black;
         border: none;
@@ -95,9 +97,10 @@
         cursor: pointer;
         font-size: 0.7rem;
     }
-    .copy-btn:hover {
-        background: #009e86;
-    }
+    .copy-btn { right: 10px; }
+    .ai-btn { right: 70px; background: white; }
+    .copy-btn:hover { background: #009e86; }
+    .ai-btn:hover { background: #d6b600; }
     footer {
         margin-top: 8px;
         text-align: center;
@@ -182,7 +185,6 @@ document.getElementById("subSelect").addEventListener("change", () => {
     });
 });
 
-// Automatically fetch when file is selected
 document.getElementById("fileSelect").addEventListener("change", showData);
 
 async function showData() {
@@ -198,9 +200,12 @@ async function showData() {
 
         const resultBox = document.getElementById("result");
         resultBox.innerHTML = `
+            <button class="ai-btn" onclick="sendToAI()">GPT</button>
             <button class="copy-btn" onclick="copyCode()">Copy</button>
             <h4>${file}</h4>
-            <pre><code class="language-c" id="codeArea">${escapeHTML(codeText)}</code></pre>
+
+            <!-- LINE NUMBERS ENABLED -->
+            <pre class="line-numbers"><code class="language-c" id="codeArea">${escapeHTML(codeText)}</code></pre>
         `;
 
         Prism.highlightAll();
@@ -215,13 +220,31 @@ function copyCode() {
     Swal.fire({ icon: "success", title: "Copied!", timer: 1000, showConfirmButton: false });
 }
 
+function sendToAI() {
+    const code = encodeURIComponent(document.getElementById("codeArea").innerText);
+
+    Swal.fire({
+        title: "Send to chatGPT",
+        text: "",
+        showCancelButton: true,
+        confirmButtonText: "Send",
+        
+    }).then(res => {
+        if (res.isConfirmed) {
+            window.open(`https://chat.openai.com/?q=${code}`, "_blank");
+        } else if (res.dismiss === Swal.DismissReason.cancel) {
+           // window.open(`https://gemini.google.com/app?q=${code}`, "_blank");
+        }
+    });
+}
+
 function escapeHTML(str) {
     return str.replace(/[&<>"']/g, function (m) {
         return ({
-            '&': '&amp;',
-            '<': '&lt;',
-            '>': '&gt;',
-            '"': '&quot;',
+            '&': '&',
+            '<': '<',
+            '>': '>',
+            '"': '"',
             "'": '&#039;'
         })[m];
     });
@@ -245,4 +268,4 @@ function showTerms() {
 loadData();
 </script>
 </body>
-</html>
+       </html>
